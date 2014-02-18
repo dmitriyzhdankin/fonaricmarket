@@ -1,0 +1,126 @@
+    <div class="grid_12" style="float:left;height:300px;overflow:hidden;margin-top:-20px;">
+        <div class="slidprev"><span>Назад</span></div>
+        <div class="slidnext"><span>Вперёд</span></div>
+        <div id="slider">
+        {$wa_banner}
+        </div>
+        <div id="myController">
+         {$wa_controller}
+        </div>
+    </div><!-- .grid_12 -->
+
+  <div class="clear"></div>
+
+      <div id="top_button">
+         {$wa_small_banner}
+        <div class="clear"></div>
+      </div><!-- #top_button -->
+
+      <div class="clear"></div>
+
+<!-- top products -->
+{$promos = $wa->shop->productSet('promo')}
+{$bestsellers = $wa->shop->productSet('bestsellers')}
+{if $promos && count($promos)}
+<div class="container_12" style="display:block;height:435px;overflow:hidden;">  
+<div class="carousel" style="min-height:413px;">
+        <div class="c_header">
+          <div class="grid_10">
+            <h2>Популярные продукты:</h2>
+          </div><!-- .grid_10 -->
+
+          <div class="grid_2">
+            <a id="next_c1" class="next arows" href="#"><span>Вперёд</span></a>
+            <a id="prev_c1" class="prev arows" href="#"><span>Назад</span></a>
+           </div><!-- .grid_2 -->
+        </div><!-- .c_header -->
+
+        <div class="list_carousel">
+
+        <ul id="list_product" class="list_product">
+        {foreach $promos as $p}
+        
+        <li class="">
+            <div class="grid_3 product">             
+              <div class="prev">
+                <a href="{$p.frontend_url}" title="{$p.name}{if $p.summary} &mdash; {strip_tags($p.summary)}{/if}">
+                {$wa->shop->productImgHtml($p, '210x210', ['default' => "`$wa_theme_url`img/dummy200.png", 'alt' => $p.name])}
+                    </a></div>
+              <h3 class="title">{$p.name}</h3>
+              <div class="cart">
+                <div class="price">
+                <div class="vert">
+                  <div class="price_new">{shop_currency($p.price)}</div>
+                  {if $p.compare_price > 0 }<div class="price_old">{shop_currency($p.compare_price|ceil)}</div>{/if}
+                </div>
+                </div>
+                <form class="addtocart" method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                <input type="hidden" name="product_id" value="{$p.id}">
+                <input type="submit" {if $p.price eq 0}disabled="disabled" style="background:#CCC;"{/if} value="Купить" onclick="{literal}open_pop_up('#onclick_buy');{/literal}">
+                </form>
+              </div>
+            </div>
+          </li>  
+        {/foreach}
+    </ul><!-- #list_product -->
+  </div><!-- .list_carousel -->
+</div><!-- .carousel -->
+</div>
+{/if}
+
+{if $bestsellers && count($bestsellers)}
+<div class="container_12" style="display:block;height:435px;overflow:hidden;">  
+  <div class="carousel" style="min-height:413px;">
+        <div class="c_header">
+          <div class="grid_10">
+            <h2>Самые продаваемые:</h2>
+          </div><!-- .grid_10 -->
+
+          <div class="grid_2">
+            <a id="next_c2" class="next arows" href="#"><span>Вперёд</span></a>
+            <a id="prev_c2" class="prev arows" href="#"><span>Назад</span></a>
+           </div><!-- .grid_2 -->
+        </div><!-- .c_header -->
+
+        <div class="list_carousel">
+
+        <ul id="list_product2" class="list_product">
+        {foreach $bestsellers as $p}
+        
+        <li class="">
+            <div class="grid_3 product">             
+              <div class="prev">
+                <a href="{$p.frontend_url}" title="{$p.name}{if $p.summary} &mdash; {strip_tags($p.summary)}{/if}">
+                {$wa->shop->productImgHtml($p, '210x210', ['default' => "`$wa_theme_url`img/dummy200.png", 'alt' => $p.name])}
+                    </a></div>
+              <h3 class="title">{$p.name}</h3>
+              <div class="cart">
+                <div class="price">
+                <div class="vert">
+                  <div class="price_new">{shop_currency($p.price)}</div>
+                  {if $p.compare_price > 0 }<div class="price_old">{shop_currency($p.compare_price|ceil)}</div>{/if}
+                </div>
+                </div>
+                <form class="addtocart" method="post" action="{$wa->getUrl('/frontendCart/add')}">
+                <input type="hidden" name="product_id" value="{$p.id}">
+                <input type="submit" {if $p.price eq 0}disabled="disabled" style="background:#CCC;"{/if} value="Купить">
+                </form>
+              </div>
+            </div>
+          </li>  
+        {/foreach}
+    </ul><!-- #list_product -->
+  </div><!-- .list_carousel -->
+</div><!-- .carousel -->
+</div>
+{/if}
+<div class="main_text">
+  <p>Fonarik-market.ru — интернет магазин фонариков, походного снаряжения, туристических ножей и иных товаров для активного отдыха — готов предложить своим посетителям очень широкий ассортимент качественной продукции от ведущих производителей со всего мира.</p>
+  <p>В настоящее время приобрести что-либо, не выходя при этом из дома — дело весьма привычное и обыденное, и единственное, что может беспокоить покупателя — это соответствие товара картинке и завяленным данным, эффективная помощь и соблюдение гарантийных обязательств. Как ни странно, нам о переживаниях клиентов тоже всё известно, поэтому все вышеперечисленные детали учтены и проработаны, а лучшие решения взяты на вооружение — пользуйтесь в удовольствие.</p>
+  <p>Преследуя весьма благие цели (помимо банальной наживы, конечно же), мы постарались организовать интернет площадку таким образом, чтобы каждому, даже неопытному пользователю сети Интернет, было максимально комфортно отовариваться в нашем магазине. На виртуальных полках Fonarik-market.ru аккуратно, словно в библиотеке, разложены товары и ждут своих поклонников, которые заберут фонари, ножи и многофункциональные инструменты в незабываемый поход или на секретное спецзадание.</p>
+  <p>Неустанная слежка за развитием индустрии туристических товаров приносит определённые плоды, а регулярные вылазки на разнообразные тематические выставки и шоу приводят к расширению ассортимента. И вот уже узкоспециализированный магазин фонариков одну за другой открывает витрины то с ножами, то с мультиинструментами, то с непромокаемой одеждой, то с точилками, предлагая покупателям не ограничиваться банальным набором «фонарь&батарейка».</p>
+  <p>Решили присмотреться, повыбирать ножи, точилки или фонарики — интернет магазин Вам в помощь. Здесь никто не толкается, никто навязчиво не предлагает ненужного и не просит поискать мелочь, «чтоб было без сдачи». Выбирать, перебирать и раздумывать можно хоть сутками без перерыва — никто не станет Вас подгонять и «давить опытом». В общем, интернет магазин предлагает самый комфортный шопинг на сегодняшний день, а Fonarik-market.ru, помимо удобств, обеспечит хорошее настроение, яркие воспоминания и устойчивое привыкание исключительно к лучшему.</p>
+</div>
+
+
+      <div class="clear"></div>

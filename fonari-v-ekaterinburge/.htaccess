@@ -1,0 +1,63 @@
+
+
+    
+
+<FilesMatch "\.md5$">
+    Deny from all
+</FilesMatch>
+
+DirectoryIndex index.php
+
+AddDefaultCharset utf-8
+#Options -Indexes -MultiViews
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+
+    
+    RewriteCond %{QUERY_STRING} ^page=1(&|$) [NC]
+    RewriteRule ^(.*) /$1? [R=301,L]   
+    
+    RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|png)$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [L,QSA]
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</ifModule>
+
+<ifModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|js|css)$">
+	Header set Cache-Control "max-age=3153600, public"
+    </FilesMatch>
+</ifModule>
+
+<IfModule mod_php5.c>
+    php_value date.timezone "Europe/Kiev"
+</ifModule>
+
+
+#AuthType Basic  
+#AuthName admin
+#AuthUserFile  /var/www/newfonarikru/data/www/newfonarik.ru/.htpasswd 
+#require valid-user 
+
+                                             
+
+    ErrorDocument 503 http://fonarik-market.ru/503.php
+                    
+    
+    
+                                       
+    RewriteCond %{HTTP_HOST} ^www.fonarik-market.com$ [NC]
+    RewriteRule ^(.*)$ http://fonarik-market.com/$1 [R=301,L]
+

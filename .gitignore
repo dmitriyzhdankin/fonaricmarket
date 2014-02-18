@@ -1,0 +1,8 @@
+nbproject/
+wa-cache/
+wa-config/
+wa-log/
+webstat/
+wa-data/protected/wa-installer/
+wa-data/protected/shop/products/
+wa-data/public/shop/products/
