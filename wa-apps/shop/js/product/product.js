@@ -1010,7 +1010,29 @@
             });
 
             this.featureSelectableInit();
+            this.categoriesInit();
 
+        },
+        categoriesInit: function() {
+            $('.hide_categories').on('click',function() {
+                 $('.categories_checkbox').hide();
+                 $('.change_categories').show();
+                 $('.categories_list').show();
+                 var cat_list = '';
+                 $("[name='product[categories][]']:checked").each(function() {
+                     cat_list += $(this).parent().text() + '<br/>';
+                 });
+                 $('.categories_list').each(function(){
+                     $(this).html(cat_list);
+                 });
+                 return false;
+            });
+            $('.change_categories').on('click',function() {
+                 $('.categories_list').hide();
+                 $('.change_categories').hide();
+                 $('.categories_checkbox').show();
+                 return false;
+            });
         },
 
         editFocus: function() {
@@ -1708,6 +1730,10 @@
             }
         },
 
+        editTabMainCategoriesHide: function() {
+            console.log('>>>1');
+        },
+        
         editTabMainCategoriesAdd: function() {
             var control = $('#s-product-edit-forms .s-product-form.main select.s-product-categories:last').parent();
             var clone = control.clone(false);
