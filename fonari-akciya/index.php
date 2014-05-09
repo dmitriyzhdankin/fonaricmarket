@@ -30,7 +30,7 @@ try {
     $get_csv = $csv->getCSV();
     foreach ($get_csv as $value) {
         $list_prods .= "<div id='" . $value[0] . "' class='grid_3 product' itemscope='' itemtype='http://schema.org/Product'>\n\t\t\t\t\t";
-        $list_prods .= "<div class='prev'>\n\t\t\t\t\t\t";
+        $list_prods .= "<div class='prev_sold_out'></div><div class='prev'>\n\t\t\t\t\t\t";
         $list_prods .= "<div class='count_block'><span class='count_block_text'>Осталось на складе</span>";
 		if ($value[2] < 2 ) {
 			$list_prods .= "<span class='count_block_count count_block_count_small'>" . $value[2] . "</span></div>\n\t\t\t\t\t\t";
@@ -62,7 +62,7 @@ catch (Exception $e) {
 		<meta name="yandex-verification" content="5eb55ef94d5b056b">
 		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/rhinoslider-1.05.css" />
-		<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 		<link href="css/grid.css" media="screen" rel="stylesheet" type="text/css">
 		<link rel="shortcut icon" href="img/favicon.png">
 		<script src="js/html5.js" type="text/javascript"></script>
@@ -156,6 +156,7 @@ catch (Exception $e) {
 		<div class="clear"></div>
 		<div id="main">
 			<div class="container_12">
+				<a href="http://fonarik.com/fonari-akciya/"><img src="http://fonarik.com/fonari-akciya/img/banner_akciya_ukr.jpg" style="display: block;position: absolute;margin: -20px 0 0 18px;"></a>
 				<h1 id="h1_main">Фонари с дефектами упаковки</h1>
 				<span id="after-head">Наш магазин предлагает приобрести товары с поврежденной упаковкой или без упаковки по заниженным ценам. Все уцененные изделия находятся в рабочем состоянии и не имеют каких-либо повреждений или дефектов.</span>
 				<?php echo $list_prods."\r\n";?>
@@ -229,5 +230,39 @@ catch (Exception $e) {
 				</div>  
 			</div>
 		</div>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-6681162-18']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter22409665 = new Ya.Metrika({id:22409665,
+                    webvisor:true,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+				} catch(e) { }
+			});
+			var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="//mc.yandex.ru/watch/22409665" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 	</body>
 </html>

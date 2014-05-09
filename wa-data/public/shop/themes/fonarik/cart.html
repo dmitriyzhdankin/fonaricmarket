@@ -1,5 +1,17 @@
 <script type="text/javascript" src="{$wa_active_theme_url}cart.js"></script>
-
+<!-- Conversion tracking code: purchases. Step 1: Product added to cart -->
+<script type="text/javascript">
+(function(w, p) {
+var a, s;
+(w[p] = w[p] || []).push({
+counter_id: 371963834,
+tag: '0366971af1c17ef36d957615a2d89c4e'
+});
+a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+a.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'autocontext.begun.ru/analytics.js';
+s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(a, s);
+})(window, 'begun_analytics_params');
+</script>
 {if !$cart.count}
  <div class="grid_12">
        <h1 class="page_title">[`Shopping cart`]</h1>
@@ -14,7 +26,8 @@
        <h1 class="page_title">[`Shopping cart`]</h1>
     
         <form method="post">
- <table class="cart_product cart">
+        <div class="bottom_block total" style="min-height: 56px;padding: 0;"><input name="checkout" type="submit" value="[`Proceed to checkout`]" class="button large checkout" style="margin: 0;"/></div>
+ <table class="cart_product cart" style="width: 984px;">
 	      <tr>
 		     <th class="images"></th>
 		     <th class="bg name">Название</th>
@@ -72,8 +85,8 @@
        </table>
        </div><!-- .grid_12 -->
 
-       <div id="content_bottom">
-        <div class="grid_4">
+       <div id="content_bottom" style="float: left;width: 100%;">
+        <!--<div class="grid_4">
           <div class="bottom_block estimate">
                 {if shopAffiliate::isEnabled() && $affiliate_bonus}
                 
@@ -87,10 +100,10 @@
                    &minus; {if $use_affiliate}{shop_currency(shopAffiliate::convertBonus($used_affiliate_bonus))}{else}0{/if}</td>
                    
                 {/if}
-          </div><!-- .estimate -->
-        </div><!-- .grid_4 -->
+          </div>--><!-- .estimate -->
+        <!--</div>--><!-- .grid_4 -->
 
-        <div class="grid_4">
+        <!--<div class="grid_4">
           <div class="bottom_block discount">
             
              {if 1}
@@ -105,10 +118,10 @@
                    
  
                 {/if}
-          </div><!-- .discount -->
-        </div><!-- .grid_4 -->
+          </div> --><!-- .discount -->
+        <!-- </div> --><!-- .grid_4 -->
 
-        <div class="grid_4">
+        <div class="grid_4" style="float: right;">
           <div class="bottom_block total">
 	      <table class="subtotal">
 		     <!--<tr>

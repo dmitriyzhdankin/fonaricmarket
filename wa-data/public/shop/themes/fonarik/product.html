@@ -154,6 +154,7 @@
     {/if}   
                 
             <a href="reviews/" class="add_review">Оставить отзыв</a></div>
+              <img onClick="change_head1('Нашли дешевле? Покупайте у нас со скидкой!');" src="http://fonarik-market.ru/fonari-akciya/img/nashli_deshevle_b.png" style="position: absolute;margin: 0 0 0 216px;cursor: pointer;display: block;top: 440px;">
 <span id="pre_desc" style="float: left;width: 396px;text-align: center;margin: 0 0 10px 0;"><a href="http://fonarik-market.ru/fonari-akciya/" target="_blank"><img src="http://fonarik-market.ru/fonari-akciya/img/fonari_necon.png"></a></span>
             <p>{$product.summary}</p>
          
@@ -168,7 +169,7 @@
 
         <!-- tags -->
         {if $product.tags}
-            <span class="tags" id="product-tags">
+            <span class="tags" id="product-tags" style="float: left;width: 100%;">
                 [`Tags`]:
                 <span class="product-info">
                 {foreach $product.tags as $t}
@@ -341,7 +342,8 @@
 	</div>
 </div>
                     </div><!-- .ava_price -->
-			<div class="yashare-auto-init" style="margin: 10px 0;" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,moikrug,gplus"></div>
+			<div class="yashare-auto-init" style="margin: 10px 0;width: 210px;float: left;" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,moikrug,gplus"></div>
+              <a style="display: block;width: 160px;float: left;margin: 2px 0;" href="http://clck.yandex.ru/redir/dtype=stred/pid=47/cid=1248/*http://market.yandex.ru/shop/205444/reviews/add"><img src="http://clck.yandex.ru/redir/dtype=stred/pid=47/cid=1248/*http://img.yandex.ru/market/informer12.png" border="0" alt="Оцените качество магазина на Яндекс.Маркете." /></a>
             <div class="block_cart">            
             <div class="obn_like">
                 <div class="obn">
@@ -356,13 +358,43 @@
                 <input type="text" name="quantity" class="number" value="1">                
                 <span>Количество:</span>
             </div>
-			<div class="1click_button" id="button_1click" onclick="{literal}open_pop_up_1clk('#zakaz_30dney_block');{/literal}">Купить по телефону</div>
+			<div class="1click_button" style="width: 160px;" id="button_1click" onclick="{literal}open_pop_up_1clk('#zakaz_30dney_block');{/literal}">Купить по телефону</div>
             <div class="clear"></div>
             </div>
 
             </div>
            </div> 
         </form>
+     	<div id="ob_contact1">
+			<div id="ob_contact_block_form1">
+				<div id="ob_contact_block_form_head1">
+					<span id="ob_contact_block_form_head_text1"></span>
+					<span id="ob_contact_block_form_head_button1" onClick="close_popup1();">х</span>
+				</div>
+				<div id="ob_contact_block_form_content1">
+					<div id="note_j1"></div>
+                  	<div id="note_j_j1"></div>
+					<form id="ob_contact_block_form_content_form1" name="ob_contact1" action="#">
+						<div class="ob_contact_block_form_content_form_block">
+                          <label>Ваше имя<span style="color: red;">*</span></label>
+                        	<input type="text" name="name" value="Введите Ваше имя" onfocus="this.value = ''" class="ob_contact_block_form_content_form_input" maxlength="25">
+							<label>Ваш телефон<span style="color: red;">*</span></label>
+							<input type="text" name="phone" value="Введите Ваш телефон" onfocus="this.value = ''" class="ob_contact_block_form_content_form_input" maxlength="25">
+                     	</div>
+                      	<div class="ob_contact_block_form_content_form_block">
+							<label>Ссылка (где нашли дешевле)</label>
+							<input type="text" name="url_d" value="" class="ob_contact_block_form_content_form_input">
+                      		<label>Цена (которую нашли дешевле)</label>
+							<input type="text" name="cena_d" value="" class="ob_contact_block_form_content_form_input">
+                      	</div>
+                      	<input type="hidden" id="subject1" name="subject" value="">
+                      	<input type="hidden" name="ident" value="1">
+                      	<input type="hidden" name="name_tov" value="{$product.name}">
+						<input class="ob_contact_block_form_content_form_button" type="submit" name="submit" value="ОТПРАВИТЬ">
+					</form>
+				</div>
+			</div>
+		</div>
 		<div id="zakaz_30dney_block">
           <div id="zakaz_30dney">
 					<div id="zakaz_30dney_wrapper">

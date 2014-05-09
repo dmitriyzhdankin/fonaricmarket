@@ -4616,7 +4616,7 @@ text-decoration: none;
 #after-head {
 	display: block;
 	margin: 0 12px;
-	padding: 5px 0 20px 0;
+	padding: 25px 0 20px 0;
 	text-align: center;
 	font-size: 22px;
 	color: #6e6e6e;
@@ -4649,4 +4649,11 @@ text-decoration: none;
 }
 #grid_22_link_f {
 	border-left: 1px solid #fff;
+}
+.prev_sold_out {
+	width: 226px;
+	height: 105px;
+	position: absolute;
+	margin: 110px 0 0 0;
+	background: url(../images/sold_out_bg.png) no-repeat;
 }

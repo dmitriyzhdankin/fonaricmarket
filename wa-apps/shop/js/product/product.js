@@ -1010,7 +1010,8 @@
             });
 
             this.featureSelectableInit();
-            this.categoriesInit();
+
+                   this.categoriesInit();
 
         },
         categoriesInit: function() {
@@ -1730,10 +1731,6 @@
             }
         },
 
-        editTabMainCategoriesHide: function() {
-            console.log('>>>1');
-        },
-        
         editTabMainCategoriesAdd: function() {
             var control = $('#s-product-edit-forms .s-product-form.main select.s-product-categories:last').parent();
             var clone = control.clone(false);

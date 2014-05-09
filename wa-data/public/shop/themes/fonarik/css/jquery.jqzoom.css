@@ -2,7 +2,7 @@
 	height: 294px;
 	position:relative;
 	float:left;
-	z-index:99;
+	z-index:98;
 	cursor:crosshair;
 }
 .zoomPreload{

@@ -1871,7 +1871,7 @@ margin:0px;
 .product_page .entry_content p{margin-bottom: 20px}
 .product_page .entry_content .review{
 	height: 29px;
-margin: 215px 0 15px 0px;
+margin: 230px 0 15px 0px;
 color: #777;
 font: normal 11px/29px Segoeui, Arial, Verdana, serif;
 }
@@ -1935,6 +1935,7 @@ height: 40px;
 width: 396px;
 position: absolute;
 top: 470px;
+margin: 35px 0;
 }
 .product_page .entry_content .ava_price .availability_sku{
 	float: left;
@@ -2061,13 +2062,14 @@ box-shadow: none;
 
 ul#product-skus li{
 list-style:none;
+margin: 5px 0;
 }
 ul#product-skus {
 	width: 180px;
-height: 50px;
-position: absolute;
-top: 400px;
-z-index: 100;
+	position: absolute;
+	top: 375px;
+	z-index: 98;
+	padding: 0;
 }
 .product_page .entry_content .soc img{float: right}
 /*** Tab ***/
@@ -3129,28 +3131,26 @@ form.letter_form #submit:hover{
 /**********
  * footer *
  **********/
-#footer{}
+#footer{margin: 15px 0 0 0;}
 .f_navigation{
 	height: auto;
-	padding: 25px 0px 0px 0px;
-	
-	
+	padding: 10px 0px 0px 0px;
 	background: url(../images/bg_footer.png) repeat left top;
 }
 
 .f_navigation h4{
-color:#114c62;	
-margin-bottom:10px;
-padding-bottom:0px;
-font-size:16px;
+	color:#114c62;	
+	margin-bottom:10px;
+	padding-bottom:0px;
+	font-size:16px;
 }
 
 .footer_time{
-float:left;
-line-height:16px;
-color:#808183;
-width:375px;
-margin:0x 0px 5px 0px;
+	float:left;
+	line-height:16px;
+	color:#808183;
+	width:375px;
+	margin:0px 0px 5px 0px;
 	
 }
 
@@ -3159,11 +3159,11 @@ background: transparent;
 }
 
 .footer_time span {
-display:block;
-float:left;
-width:16px;
-height:20px;
-background: url(../img/sprite.png) no-repeat -224px -3px;
+	display:block;
+	float:left;
+	width:16px;
+	height:20px;
+	background: url(../img/sprite.png) no-repeat -224px -3px;
 }
 
 .footer_time span.phone {
@@ -3175,12 +3175,12 @@ background: url(../img/sprite.png) no-repeat -224px -3px;
 }
 
 .footer_time p{
-display:block;
-float:right;
-font-size:12px;
-line-height:18px;
-width:355px;
-color:#21c9f0;
+	display:block;
+	float:right;
+	font-size:14px;
+	line-height:22px;
+	width:355px;
+	color:#21c9f0;
 }
 
 .f_navigation h3{
@@ -3941,4 +3941,324 @@ div.wa-value input[type="radio"] {
 	line-height: 18px;
 	text-indent: 20px;
 	text-align: justify;
+}
+#product-skus label {
+	min-height: 20px;
+	display: block;
+	line-height: 22px;
+}
+#product-skus input {
+	display: block;
+	float: left;
+	margin: 5px;
+}
+#footer_svyaz {
+	font-size: 12px;
+	width: 100%;
+	float: left;
+}
+#footer_svyaz_h {
+	display: block;
+	font-weight: bold;
+	margin: 5px 0 0 5px;
+}
+#footer_svyaz_ht {
+	display: block;
+	margin: 0 0 0 5px;
+	border-bottom: 1px dotted;
+}
+#footer_svyaz_m {
+	display: block;
+	margin: 5px 0 0 5px;
+	border-bottom: 1px dotted;
+}
+#footer_svyaz_htl {
+	text-decoration: underline;
+	color: #59b7c2;
+}
+#footer_svyaz_htl:hover {
+	text-decoration: none;
+	color: #59b7c2;
+	cursor: pointer;
+}
+#button_director {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+#button_director_button {
+	display: block;
+	margin: 5px 0;
+	cursor: pointer;
+	color: rgb(112, 112, 112);
+	font-size: 14px;
+	padding: 10px;
+	text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.7);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: rgb(200, 200, 200);
+	background: -moz-linear-gradient(90deg, rgb(200, 200, 200) 0%, rgb(234, 234, 234) 100%);
+	background: -webkit-linear-gradient(90deg, rgb(200, 200, 200) 0%, rgb(234, 234, 234) 100%);
+	background: -o-linear-gradient(90deg, rgb(200, 200, 200) 0%, rgb(234, 234, 234) 100%);
+	background: -ms-linear-gradient(90deg, rgb(200, 200, 200) 0%, rgb(234, 234, 234) 100%);
+	background: linear-gradient(0deg, rgb(200, 200, 200) 0%, rgb(234, 234, 234) 100%);
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(0, 0, 0, 0.5);
+	box-shadow:         0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#button_director_button:hover {
+	background: rgb(234, 234, 234);
+	background: -moz-linear-gradient(90deg, rgb(234, 234, 234) 0%, rgb(200, 200, 200) 100%);
+	background: -webkit-linear-gradient(90deg, rgb(234, 234, 234) 0%, rgb(200, 200, 200) 100%);
+	background: -o-linear-gradient(90deg, rgb(234, 234, 234) 0%, rgb(200, 200, 200) 100%);
+	background: -ms-linear-gradient(90deg, rgb(234, 234, 234) 0%, rgb(200, 200, 200) 100%);
+	background: linear-gradient(0deg, rgb(234, 234, 234) 0%, rgb(200, 200, 200) 100%);
+}
+#ob_contact {
+				position: fixed;
+				width: 690px;
+				height: 390px;
+				top: 50%;
+				left: 50%;
+				padding: 5px;
+				margin: -195px 0 0 -345px!important;
+				z-index: 999;
+				overflow: hidden;
+				display: none;
+			}
+#ob_contact_block_form {
+				width: 680px;
+				height: 380px;
+				background: #e2e2e2;
+				border: 5px solid #fff;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				box-shadow: 0 0 1px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.70);
+				-webkit-box-shadow: 0 0 1px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.70);
+				-moz-box-shadow: 0 0 1px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.70);
+
+			}
+			#ob_contact_block_form_head {
+				float: left;
+				width: 100%;
+				border-bottom: 1px solid #a0a0a0;
+			}
+			#ob_contact_block_form_head_text {
+				display: block;
+				float: left;
+				width: 600px;
+				margin: 0 0 0 23px;
+				padding: 15px 0 13px 0;
+				font-family: Tahoma;
+				font-size: 18pt;
+				line-height: 28px;
+				color: #4d4d4d;
+			}
+			#ob_contact_block_form_head_button {
+				display: block;
+				float: left;
+				width: 36px;
+				height: 36px;
+				margin: 5px 0 0 15px;
+				background: #4b4b4b;
+				border-radius: 18px;
+				-webkit-border-radius: 18px;
+				-moz-border-radius: 18px;
+				line-height: 30px;
+				text-align: center;
+				font-family: Arial;
+				font-weight: bold;
+				font-size: 24pt;
+				color: #fff;
+				box-shadow: 0 0 3px rgba(0,0,0,0.75), inset 0 0 5px rgba(255,255,255,0.75);
+				-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.75), inset 0 0 5px rgba(255,255,255,0.75);
+				-moz-box-shadow: 0 0 3px rgba(0,0,0,0.75), inset 0 0 5px rgba(255,255,255,0.75);
+				cursor: pointer;
+			}
+			#ob_contact_block_form_head_button:hover {
+				background: #9f9f9f;
+			}
+			#ob_contact_block_form_content {
+				float: left;
+				width: 100%;
+			}
+			#ob_contact_block_form_content_form {
+				width: 625px;
+				height: 240px;
+				margin: 20px auto 0 auto;
+			}
+			#ob_contact_block_form_content_form label {
+				display: block;
+				font-family: Tahoma;
+				font-size: 12pt;
+				color: #4d4d4d;
+			}
+			.ob_contact_block_form_content_form_input {
+				margin: 5px 0 10px 0;
+				padding: 0 10px;
+				width: 240px;
+				height: 30px;
+				background: #fff;
+				border: none;
+				box-shadow: inset 0 0 5px rgba(0,0,0,0.7);
+				border-radius: 5px;
+				color: #888;
+			}
+			#ob_contact_block_form_content_form textarea {
+				display: block;
+				width: 410px;
+				float: left;
+				margin: 5px 0 10px 0;
+				background: #fff;
+				border: none;
+				box-shadow: inset 0 0 5px rgba(0,0,0,0.7);
+				border-radius: 5px;
+				color: #888;
+			}
+			.ob_contact_block_form_content_form_button {
+				float: left!important;
+				margin: 65px 0 0 20px!important;
+				padding: 0!important;
+				border: 2px solid #fff!important;
+				width: 151px!important;
+				height: 33px!important;
+				box-shadow: inset 0 0 5px rgba(185,236,255,0.75)!important;
+				font-family: Tahoma!important;
+				font-size: 13pt!important;
+				color: #fff!important;
+				background: rgb(64, 167, 206)!important;
+				background: -moz-linear-gradient(90deg, rgb(64, 167, 206) 0%, rgb(28, 75, 93) 100%)!important;
+				background: -webkit-linear-gradient(90deg, rgb(64, 167, 206) 0%, rgb(28, 75, 93) 100%)!important;
+				background: -o-linear-gradient(90deg, rgb(64, 167, 206) 0%, rgb(28, 75, 93) 100%)!important;
+				background: -ms-linear-gradient(90deg, rgb(64, 167, 206) 0%, rgb(28, 75, 93) 100%)!important;
+				background: linear-gradient(180deg, rgb(64, 167, 206) 0%, rgb(28, 75, 93) 100%)!important;
+				border-radius: 5px!important;
+				cursor: pointer!important;
+			}
+			.ob_contact_block_form_content_form_button:hover {
+				background: rgb(28, 75, 93);
+				background: -moz-linear-gradient(90deg, rgb(28, 75, 93) 0%, rgb(64, 167, 206) 100%)!important;
+				background: -webkit-linear-gradient(90deg, rgb(28, 75, 93) 0%, rgb(64, 167, 206) 100%)!important;
+				background: -o-linear-gradient(90deg, rgb(28, 75, 93) 0%, rgb(64, 167, 206) 100%)!important;
+				background: -ms-linear-gradient(90deg, rgb(28, 75, 93) 0%, rgb(64, 167, 206) 100%)!important;
+				background: linear-gradient(180deg, rgb(28, 75, 93) 0%, rgb(64, 167, 206) 100%)!important;
+			}
+#note_j {
+	position: absolute;
+	margin: 200px 0 0 40px;
+}
+.notification_error_j {
+	font-family: Tahoma;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: red;
+	text-align: left;
+	display: block;
+	width: 405px;
+}
+#note_j_j {
+	position: absolute;
+	padding: 10px;
+	margin: 20px 0;
+	width: 660px;
+}
+.notification_ok_j {
+	font-family: Tahoma;
+	font-size: 18px;
+	text-transform: uppercase;
+	line-height: 30px;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+}
+.ob_contact_block_form_content_form_block {
+	float: left;
+	width: 275px;
+	height: 150px;
+	margin: 10px;
+}
+#ob_contact1 {
+	position: fixed;
+	width: 690px;
+	height: 390px;
+	top: 50%;
+	left: 50%;
+	padding: 5px;
+	margin: -195px 0 0 -345px!important;
+	z-index: 999;
+	overflow: hidden;
+	display: none;
+}
+#ob_contact_block_form1 {
+	width: 680px;
+	height: 380px;
+	background: #e2e2e2;
+	border: 5px solid #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 1px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.70);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.70);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.70);
+}
+#ob_contact_block_form_head1 {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #a0a0a0;
+}
+#ob_contact_block_form_head_text1 {
+	display: block;
+	float: left;
+	width: 600px;
+	margin: 0 0 0 23px;
+	padding: 15px 0 13px 0;
+	font-family: Tahoma;
+	font-size: 18pt;
+	line-height: 28px;
+	color: #4d4d4d;
+}
+#ob_contact_block_form_head_button1 {
+	display: block;
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin: 5px 0 0 15px;
+	background: #4b4b4b;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	line-height: 30px;
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 24pt;
+	color: #fff;
+	box-shadow: 0 0 3px rgba(0,0,0,0.75), inset 0 0 5px rgba(255,255,255,0.75);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.75), inset 0 0 5px rgba(255,255,255,0.75);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.75), inset 0 0 5px rgba(255,255,255,0.75);
+	cursor: pointer;
+}
+#ob_contact_block_form_head_button1:hover {
+	background: #9f9f9f;
+}
+#ob_contact_block_form_content1 {
+	float: left;
+	width: 100%;
+}
+#note_j1 {
+	position: absolute;
+	margin: 200px 0 0 40px;
+}
+#note_j_j1 {
+	position: absolute;
+	padding: 10px;
+	margin: 20px 0;
+	width: 660px;
+}
+#ob_contact_block_form_content_form1{
+	width: 625px;
+	height: 240px;
+	margin: 20px auto 0 auto;
 }

@@ -142,10 +142,7 @@
         <div class="clear"></div>
 	</div> 
     {/if}
-    <!-- description -->
-    {if $category.description}
-        <div id="category_description">{$category.description}</div>
-    {/if}
+
  <div class="clear"></div>
 	   {if isset($pages_count) && $pages_count > 1}    
 	      <div class="pagination">
@@ -153,6 +150,10 @@
 	      </div><!-- .pagination -->
 	      <p class="pagination_info"></p>
   {/if}
+      <!-- description -->
+    {if $category.description && !waRequest::get(page)}
+        <div id="category_description">{$category.description}</div>
+    {/if}
     
        </div><!-- #content -->
        <div class="categoryID">{$category.id}</div>       

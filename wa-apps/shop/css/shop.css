@@ -784,3 +784,5 @@ ul.s-feature-values.menu-v li a { margin-left: 0; padding-left: 0; }
 .icon16.ss.orders-all { background-position: -16px -128px; }
 .icon16.ss.sku-type-flat { background-position: -32px -128px; }
 .icon16.ss.sku-type-selectable { background-position: -48px -128px; }
+
+.categories_checkbox .cat_checky { display: block; }
