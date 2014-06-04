@@ -1,18 +1,21 @@
-    <div class="grid_12" style="float:left;height:300px;overflow:hidden;margin-top:-20px;">
-        <div class="slidprev"><span>Назад</span></div>
-        <div class="slidnext"><span>Вперёд</span></div>
-        <div id="slider">
-        {$wa_banner}
-        </div>
-        <div id="myController">
-         {$wa_controller}
-        </div>
+    <div class="grid_12">
+        {$wa->dislider->showSlider('1')}
     </div><!-- .grid_12 -->
 
   <div class="clear"></div>
 
       <div id="top_button">
-         {$wa_small_banner}
+         {$slires = $wa->dislider->getSlides('4')}
+         {if $slires}
+            {foreach $slires as $slide}
+                <div class="grid_4" style="width:320px;margin:0px 0px 0px 12px;">
+                    <a href="{$slide['link']}" title="{$slide['title']}" class="button_block best_price">
+                        <img src="{$slide['url']}" alt="{$slide['title']}" width="320" height="101"/>
+                    </a>
+                </div>
+            {/foreach}
+         {/if}          
+         
         <div class="clear"></div>
       </div><!-- #top_button -->
 
@@ -22,7 +25,7 @@
 {$promos = $wa->shop->productSet('promo')}
 {$bestsellers = $wa->shop->productSet('bestsellers')}
 {if $promos && count($promos)}
-<div class="container_12" style="display:block;height:435px;overflow:hidden;">  
+<div class="container_12" style="display:block;height:455px;overflow:hidden;">  
 <div class="carousel" style="min-height:413px;">
         <div class="c_header">
           <div class="grid_10">
@@ -46,6 +49,28 @@
                 <a href="{$p.frontend_url}" title="{$p.name}{if $p.summary} &mdash; {strip_tags($p.summary)}{/if}">
                 {$wa->shop->productImgHtml($p, '210x210', ['default' => "`$wa_theme_url`img/dummy200.png", 'alt' => $p.name])}
                     </a></div>
+                {$reviews_total_count = shopCustomPlugin::getReviewsCount($p.id)}
+            <div class="product-rating">
+            {if !empty($p.rating) && $p.rating > 0}
+                    <span class="rating nowrap" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" title="{sprintf('[`Average user rating: %s / 5`]', $product.rating)}">
+                        {$wa->shop->ratingHtml($p.rating, 16)}
+                        <span itemprop="ratingValue" style="display: none;" itemprop="ratingValue">{$p.rating}</span>
+                        <span itemprop="reviewCount" style="display: none;" itemprop="ratingCount">{$p.rating_count}</span>
+                        <span itemprop="bestRating" style="display: none;">5</span>
+                    </span>
+            {else}
+                <span class="rating nowrap">
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                </span>
+            {/if}
+            {if $reviews_total_count }
+                <a href="http://fonarik-market.ru{$p.frontend_url}#reviews"><span>Отзывы {$reviews_total_count}</span></a>
+            {/if}
+            </div>
               <h3 class="title">{$p.name}</h3>
               <div class="cart">
                 <div class="price">
@@ -69,7 +94,7 @@
 {/if}
 
 {if $bestsellers && count($bestsellers)}
-<div class="container_12" style="display:block;height:435px;overflow:hidden;">  
+<div class="container_12" style="display:block;height:455px;overflow:hidden;">  
   <div class="carousel" style="min-height:413px;">
         <div class="c_header">
           <div class="grid_10">
@@ -93,6 +118,28 @@
                 <a href="{$p.frontend_url}" title="{$p.name}{if $p.summary} &mdash; {strip_tags($p.summary)}{/if}">
                 {$wa->shop->productImgHtml($p, '210x210', ['default' => "`$wa_theme_url`img/dummy200.png", 'alt' => $p.name])}
                     </a></div>
+                {$reviews_total_count = shopCustomPlugin::getReviewsCount($p.id)}
+            <div class="product-rating">
+            {if !empty($p.rating) && $p.rating > 0}
+                    <span class="rating nowrap" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" title="{sprintf('[`Average user rating: %s / 5`]', $product.rating)}">
+                        {$wa->shop->ratingHtml($p.rating, 16)}
+                        <span itemprop="ratingValue" style="display: none;" itemprop="ratingValue">{$p.rating}</span>
+                        <span itemprop="reviewCount" style="display: none;" itemprop="ratingCount">{$p.rating_count}</span>
+                        <span itemprop="bestRating" style="display: none;">5</span>
+                    </span>
+            {else}
+                <span class="rating nowrap">
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                    <i class="icon16 star-empty"></i>
+                </span>
+            {/if}
+            {if $reviews_total_count }
+                <a href="http://fonarik-market.ru{$p.frontend_url}#reviews"><span>Отзывы {$reviews_total_count}</span></a>
+            {/if}
+            </div>
               <h3 class="title">{$p.name}</h3>
               <div class="cart">
                 <div class="price">

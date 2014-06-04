@@ -18,6 +18,7 @@ class waRequest
     const TYPE_STRING = 'string';
     const TYPE_STRING_TRIM = 'string_trim';
     const TYPE_ARRAY_INT = 'array_int';
+    const TYPE_ARRAY = 'array';
 
     protected static $params = array();
 
@@ -30,7 +31,7 @@ class waRequest
             case self::TYPE_INT:
                 return (int)$val;
             case self::TYPE_STRING_TRIM:
-                return trim($val);
+                return trim(self::cast($val, self::TYPE_STRING));
             case self::TYPE_ARRAY_INT:
                 if (!is_array($val)) {
                     $val = explode(",", $val);
@@ -46,6 +47,11 @@ class waRequest
                     if (is_array($val)) {
                         $val = null;
                     }
+                }
+                break;
+            case self::TYPE_ARRAY:
+                if (!is_array($val)) {
+                    $val = (array) $val;
                 }
                 break;
         }
@@ -324,5 +330,22 @@ class waRequest
             return self::param('theme_mobile', 'default');
         }
         return self::param('theme', 'default');
+    }
+
+    public static function isHttps()
+    {
+        if(!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+            return true;
+        }
+        if (!empty($_SERVER['HTTP_X_HTTPS']) && strtolower($_SERVER['HTTP_X_HTTPS']) != 'off') {
+            return true;
+        }
+        if (!empty($_SERVER['HTTPS']) && (strtolower($_SERVER['HTTPS']) == 'on' || $_SERVER['HTTPS'] == '1')) {
+            return true;
+        }
+        if (!empty($_SERVER['HTTP_HTTPS']) && (strtolower($_SERVER['HTTP_HTTPS']) == 'on' || $_SERVER['HTTP_HTTPS'] == '1')) {
+            return true;
+        }        
+        return false;
     }
 }

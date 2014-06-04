@@ -2,7 +2,7 @@
 
     <div class="block double-padded align-center blank">
             <br><br><br><br>
-            <span class="gray large">[`You don't have any orders here.`]</span>
+            <span class="gray large">[`There are no orders in this view.`]</span>
             <div class="clear-left"></div>
         </div>
     </div>
@@ -116,16 +116,15 @@
                         {foreach from=$main_contact_info item=top_field}
                             <li>{if $top_field.id != 'im'}<i class="icon16 {$top_field.id}"></i>{/if}{$top_field.value}</li>
                         {/foreach}
-						<p>
-            {foreach $custom_fields as $f}
-            {$f.title}: {$f.value}<br>
-            {/foreach}
-            </p>
                     </ul>
                 {/if}
             </div>
         </div>
-    
+
+        <!-- plugin hook: 'backend_order.info_section' -->
+        {* @event backend_order.%plugin_id%.info_section *}
+        {if !empty($backend_order)}{foreach $backend_order as $_}{if (!empty($_.info_section))}<li>{$_.info_section}</li>{/if}{/foreach}{/if}
+
         <div class="clear-right"></div>
     
         <!-- order comment -->
@@ -137,7 +136,7 @@
         <!-- order shipping & billing addresses -->
         <div class="float-right s-order-aux">
             <a target="_blank" href="https://maps.google.ru/maps?q={urlencode($shipping_address_text)}&z=15">
-            <img src="http://maps.googleapis.com/maps/api/staticmap?center={urlencode($shipping_address_text)}&zoom=13&size=200x150&markers=color:red%7Clabel:A%7C{urlencode($shipping_address_text)}&sensor=false" />
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center={urlencode($shipping_address_text)}&zoom=13&size=200x150&markers=color:red%7Clabel:A%7C{urlencode($shipping_address_text)}&sensor=false" />
             </a>
         </div>
         {/if}
@@ -166,12 +165,16 @@
         {/if}
     
         {if !empty($params.payment_name)}
-        <h3><span class="gray">[`Payment`] &mdash;</span> <strong>{$params.payment_name}</strong></h3>
-        {if $billing_address !== null}
-            <p class="s-order-address">
-                {$billing_address}
-            </p>
+            <h3><span class="gray">[`Payment`] &mdash;</span> <strong>{$params.payment_name}</strong></h3>
+            {if $billing_address !== null}
+                <p class="s-order-address">
+                    {$billing_address}
+                </p>
+            {/if}
         {/if}
+        
+        {if !empty($order.coupon)}
+            <h3><span class="gray">[`Discount`] </span> <strong>({$order.coupon.code})</strong></h3>
         {/if}
     
         <div class="clear-right"></div>
@@ -186,7 +189,7 @@
             </tr>
             {$subtotal = 0}
             {foreach $order.items as $item}
-                <tr{if $item.type == 'service'} class="small"{/if}>
+                <tr data-id="{$item.id}" {if $item.type == 'service'} class="small"{/if}>
                     <td class="min-width valign-top">
                         {if $item.type != 'service'}
                             {if !empty($item.image_id)}
@@ -205,6 +208,9 @@
                         {if !empty($item.stock)}
                             <span class="small">@{$item.stock.name|escape}</span>
                         {/if}
+                        {if !empty($item.stock_icon)}
+                            {$item.stock_icon}
+                        {/if}
                     </td>
                     <td class="align-right nowrap"><span class="gray">{wa_currency($item.price, $order.currency)} &times;</span> {$item.quantity}</td>
                     <td class="align-right nowrap">{wa_currency($item.price * $item.quantity, $order.currency)}</td>
@@ -219,7 +225,7 @@
             <tr class="no-border">
                 <td colspan="2"></td>
                 <td class="align-right">[`Discount`]</td>
-                <td class="align-right nowrap">{wa_currency($order.discount, $order.currency)}</td>
+                <td class="align-right nowrap">&minus; {wa_currency($order.discount, $order.currency)}</td>
             </tr>
             {if isset($params.shipping_name) || $order.shipping > 0}
             <tr class="no-border">
@@ -360,8 +366,14 @@
                             {if $row.contact_id}
                             <i class="icon16 userpic20" style="background-image: url('{waContact::getPhotoUrl($row.contact_id, $row.contact_photo, 20)}');"></i>
                             {$row.contact_name|escape}
+                            {elseif $row.action_id == 'callback' && $row.text}
+                            {$_tmp = explode(' ', $row.text, 2)}
+                            {$pl = shopPayment::getPluginInfo($_tmp[0])}
+                            {$row.text = $_tmp[1]}
+                            <i class="icon16" style="background-image: url('{$pl.icon.16}');"></i>
+                            {$pl.name|escape}
                             {/if}
-                            <strong>{$row.action->getOption('log_record')}</strong>
+                            <strong>{if $row.action}{$row.action->getOption('log_record')}{else}{$row.action_id}{/if}</strong>
                             {if $row.text}<p>{$row.text}</p>{/if}
                         {else}
                             {if $row.text} {$row.text}{/if}
@@ -390,7 +402,7 @@
     
             // title has to be overridden in this cases
             if (view == 'table') {
-                options.title = '{$wa->shop->orderId($order.id)|cat:' — ':$wa->accountName()}';
+                options.title = '{$wa->shop->orderId($order.id)|cat:" — ":{$wa->accountName(false)}|escape:'javascript'}';
                 if (count_new) {
                     options.title = '(' + count_new + ') ' + options.title;
                 }
@@ -407,7 +419,7 @@
                         timeout: {$timeout}
                     },
                     count_new: {$count_new},
-                    title_suffix: "{' — '|cat:$wa->accountName()}",
+                    title_suffix: '{' — '|cat:{$wa->accountName(false)}|escape:'javascript'}',
                     filter_params: {json_encode($filter_params)},
                     filter_params_str: '{$filter_params_str}'
                 };

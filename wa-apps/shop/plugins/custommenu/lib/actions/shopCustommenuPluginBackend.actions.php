@@ -7,7 +7,7 @@ class shopCustommenuPluginBackendActions extends waViewActions {
         waSystem::getInstance()->getResponse()->addJs('wa-apps/shop/plugins/custommenu/js/custommenu_backend.js');
     }
     function listAction() {
-        $this->setTemplate('/../../backend/ListMenu');
+        $this->setTemplate('plugins/custommenu/templates/actions/backend/ListMenu.html');
         
         $model = new shopCustommenuModel();
         if($data = waRequest::post()) {
@@ -34,7 +34,7 @@ class shopCustommenuPluginBackendActions extends waViewActions {
             return false;
         }
         
-        $this->setTemplate('/../../backend/EditMenu');
+        $this->setTemplate('plugins/custommenu/templates/actions/backend/EditMenu.html');
 
         $modelCM = new shopCustommenuModel();
         $menu = $modelCM->getByField(array('menu_id' => $menu_id));

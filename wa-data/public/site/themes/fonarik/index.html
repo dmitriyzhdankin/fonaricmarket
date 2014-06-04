@@ -8,11 +8,9 @@
 <meta name="Description" content="{if $my_r_description}{$my_r_keywords}{else}{$wa->meta('description')|escape}{/if}">
 <meta name="google-site-verification" content="HgxM5mlLK6npvnMkRhl7Bcs-1uABQjKYeeq6zbmKtb0">
 <meta name="yandex-verification" content="5eb55ef94d5b056b" >
-{$no_index_url = '/category/fonari-i-aksessuary/brendy-fonarei/fenix/' }
-{$cur_url = $wa->currentUrl()}
-{if strpos($cur_url,$no_index_url) == 0 && strlen($cur_url) > strlen($no_index_url) && $cur_url[strlen($no_index_url)] != '?' }
+{if waRequest::get(page) || waRequest::get(sort) || waRequest::get(view) || $wa->currentUrl(0, 1)|strpos:'/tag/' !== false || $wa->currentUrl(0, 1)|strpos:'/search/' !== false }
 <meta name="robots" content="noindex,follow" />
-{/if}	
+{/if}
     <script type="text/javascript" src="{$wa_url}wa-content/js/jquery/jquery-1.8.2.min.js"></script>
 	{if $wa->isMobile()}
 		<link href="{$wa_theme_url}custom.mobile.css?{$wa->version()}" rel="stylesheet" type="text/css">

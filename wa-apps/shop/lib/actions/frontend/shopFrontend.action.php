@@ -15,6 +15,20 @@ class shopFrontendAction extends waViewAction
         }
     }
 
+    public function addCanonical()
+    {
+        $get_vars = waRequest::get();
+        $ignore = array('page');
+        foreach ($ignore as $k) {
+            if (isset($get_vars[$k])) {
+                unset($get_vars[$k]);
+            }
+        }
+        if ($get_vars) {
+            $this->view->assign('canonical', wa()->getConfig()->getHostUrl().wa()->getConfig()->getRequestUrl(false, true));
+        }
+    }
+
     public function getStoreName()
     {
         $title = waRequest::param('title');
@@ -30,8 +44,11 @@ class shopFrontendAction extends waViewAction
 
     protected function setCollection(shopProductsCollection $collection)
     {
-        $collection->setOptions(array('filters' => true));
-        $limit = $this->getConfig()->getOption('products_per_page');
+        $collection->filters(waRequest::get());
+        $limit = (int)waRequest::cookie('products_per_page');
+        if (!$limit || $limit < 0 || $limit > 500) {
+            $limit = $this->getConfig()->getOption('products_per_page');
+        }
         $page = waRequest::get('page', 1, 'int');
         if ($page < 1) {
             $page = 1;
@@ -40,35 +57,9 @@ class shopFrontendAction extends waViewAction
 
         $products = $collection->getProducts('*', $offset, $limit);
         $count = $collection->count();
-        
-        
 
         $pages_count = ceil((float)$count / $limit);
-        
-        //echo $pages_count."===".$page;
-        
         $this->view->assign('pages_count', $pages_count);
-        $this->view->assign('pages_cur', $page);
-        $this->view->assign('prev_url', $_SERVER['REDIRECT_URL']."?page=".($page-1));
-        $this->view->assign('next_url', $_SERVER['REDIRECT_URL']."?page=".($page+1));
-                                                                                                
-        //echo $_SERVER['REQUEST_URI']."___".substr_count($_SERVER['REQUEST_URI'],"price_min");
-        
-        
-        $nr="";                                                                                                                                                             
-        if(((isset($_SERVER['REDIRECT_QUERY_STRING']) AND (($_SERVER['REDIRECT_QUERY_STRING']="view=grid") OR ( substr_count($_SERVER['REDIRECT_QUERY_STRING'],"query=")>0) OR ( substr_count($_SERVER['REDIRECT_QUERY_STRING'],"sort=")>0) OR ( substr_count($_SERVER['REDIRECT_QUERY_STRING'],"page=")>0)  )) OR ( substr_count($_SERVER['REQUEST_URI'],"price_min")>0)  OR ( substr_count($_SERVER['REQUEST_URI'],"price_max")>0)  OR ( substr_count($_SERVER['REQUEST_URI'],"/tag/")>0)  ))
-        {
-            $this->view->assign('nr_title', '<meta name="robots" content="noindex, follow">');  
-            //echo "11"; 
-        }
-        
-        
-        
-        
-     //  echo serialize($_SERVER);
-        
-        
-        
 
         $this->view->assign('products', $products);
         $this->view->assign('products_count', $count);
@@ -104,20 +95,30 @@ class shopFrontendAction extends waViewAction
          * @event frontend_nav
          * @return array[string]string $return[%plugin_id%] html output for navigation section
          */
-         
-         
-         
         $this->view->assign('frontend_nav', wa()->event('frontend_nav'));
+
+        // set globals
+        $params = waRequest::param();
+        foreach ($params as $k => $v) {
+            if (in_array($k, array('url', 'module', 'action', 'meta_keywords', 'meta_description', 'private',
+                'url_type', 'type_id', 'payment_id', 'shipping_id', 'currency', 'stock_id'))) {
+                unset($params[$k]);
+            }
+        }
+        $this->view->getHelper()->globals($params);
 
         try {
             return parent::display(false);
         } catch (waException $e) {
             if ($e->getCode() == 404) {
                 $url = $this->getConfig()->getRequestUrl(false, true);
-                if (substr($url, -1) !== '/' && substr($url, -9) !== 'index.php') {
-                    $this->redirect($url.'/');
+                if (substr($url, -1) !== '/' && strpos(substr($url, -5), '.') === false) {
+                    wa()->getResponse()->redirect($url.'/', 301);
                 }
             }
+            /**
+             * @event frontend_error
+             */
             wa()->event('frontend_error', $e);
             $this->view->assign('error_message', $e->getMessage());
             $code = $e->getCode();

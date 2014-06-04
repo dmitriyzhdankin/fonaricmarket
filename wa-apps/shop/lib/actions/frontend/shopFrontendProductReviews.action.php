@@ -33,22 +33,22 @@ class shopFrontendProductReviewsAction extends shopFrontendProductAction
             'require_authorization' => $config->getGeneralSettings('require_authorization')
         ));
 
-        //echo serialize($product['data']['name']);
-        $my_r_title=$product['data']['name']." - отзывы: интернет-магазин товаров для туризма и активного отдыха fonarik-market.ru";
-        $my_r_description = "Хотите узнать больше про ".$product['data']['name']."? Читайте отзывы в нашем интернет-магазине fonarik-market.ru!";
-        $my_r_keywords = $product['data']['name']." отзывы, интернет-магазин, fonarik-market.ru";
-        $this->view->assign('my_r_title', $my_r_title);
-        $this->view->assign('my_r_description', $my_r_description);
-        $this->view->assign('my_r_keywords', $my_r_keywords);
-        
-        
-        
         $storage = wa()->getStorage();
         $current_auth = $storage->read('auth_user_data');
         $current_auth_source = $current_auth ? $current_auth['source'] : shopProductReviewsModel::AUTH_GUEST;
 
         $this->view->assign('current_auth_source', $current_auth_source);
         $this->view->assign('current_auth', $current_auth, true);
+
+        /**
+         * @event frontend_product
+         * @param shopProduct $product
+         * @return array[string][string]string $return[%plugin_id%]['menu'] html output
+         * @return array[string][string]string $return[%plugin_id%]['cart'] html output
+         * @return array[string][string]string $return[%plugin_id%]['block_aux'] html output
+         * @return array[string][string]string $return[%plugin_id%]['block'] html output
+         */
+        $this->view->assign('frontend_product', wa()->event('frontend_product', $product, array('menu','cart','block_aux','block')));
 
         $this->setThemeTemplate('reviews.html');
     }

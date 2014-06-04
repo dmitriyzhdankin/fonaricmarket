@@ -1187,7 +1187,7 @@ div.aside h4{
 	font:bold 13px/40px Segoeui, Arial, Verdana, serif;
 }
 
-.left_menu ul li.current:hover, , .left_menu ul li.selected:hover{
+.left_menu ul li.current:hover, .left_menu ul li.selected:hover{
     background: #7ac5ce;
 	border: 1px solid #71b9c1;
 }
@@ -1659,6 +1659,7 @@ h1.post_title{
 .icon16.star-half { background-image: url(../img/icons.png); background-position:-32px 0; }
 .icon16.star-empty { background-image: url(../img/icons.png); background-position:-48px 0; }
 .icon16.star-hover { background-image: url(../img/icons.png); background-position:-64px 0; }
+.icon16.remove { background-image: url(../img/icons.png); background-position:-96px 0; }
 .icon10.star,
 .icon10.star-full { background-image: url(../img/icons.png); background-position:0 -16px; }
 .icon10.star-half { background-image: url(../img/icons.png); background-position:-10px -16px; }
@@ -1677,10 +1678,11 @@ a.more:hover{text-decoration: underline!important;}
 	margin: 0 0 20px 0;
 }
 .listing_product .product_li .cart .price .price_old{
-	padding: 5px 0 0 0;
-	color: #777;
-	font:normal 13px/13px Segoeui, Arial, Verdana, serif;
-	margin: 0;
+	padding: 5px 0 0 0;        
+        color: #FF0000;
+        font: 14px/18px Segoeui,Arial,Verdana,serif;
+        margin: 0;
+        text-decoration: line-through;
 }
 .listing_product .product_li .cart a.bay{
 	display: block;
@@ -2919,7 +2921,7 @@ a:hover.arows{
 .arows.next:hover span{background: url(../images/bg_arows.png) no-repeat right bottom;}
 
 .list_carousel, div.caroufredsel_wrapper{
-height:320px !important;
+height:345px !important;
 
 }
 #crossselling {
@@ -2927,12 +2929,12 @@ height:320px !important;
 }
 .list_product{
 	padding: 2px 0 0 0;
-	height:320px;
+	height:345px;
 	
 }
 .list_product li{
 	position: relative;
-	height: 320px;
+	height: 345px;
 	float: left;
 }
 .product:hover{
@@ -2943,7 +2945,7 @@ height:320px !important;
 }
 .product{
 	width: 226px!important;
-	height: 320px;
+	height: 340px;
 	overflow: hidden;
 	border: 1px solid #e0e0e0;
 	border-radius: 2px;
@@ -3827,7 +3829,7 @@ padding-bottom: 10px;
 background: white;
 box-shadow: 0 3px 8px #555;
 width: 200px;
-z-index: 100;
+z-index: 101;
 border: 1px solid #59b7c2;
 }
 .all_town_list_block {
@@ -4262,3 +4264,65 @@ div.wa-value input[type="radio"] {
 	height: 240px;
 	margin: 20px auto 0 auto;
 }
+.hidden {
+    display: none !important;
+}
+/** fancybox */
+.fancybox-title form.addtocart .cart {
+    height: 40px;
+    margin: -60px auto 0;
+    width: 235px;
+}
+.fancybox-title form.addtocart input[type="submit"], .fancybox-title input.bay {
+    float: left;
+    font-size: 24px;
+    height: 36px;
+    padding: 0 5px 5px;
+    text-shadow: 0 -1px 1px #23701D;
+    text-transform: none;
+}
+.fancybox-title form.addtocart .cart .price {
+    display: inline-block;
+    float: left;
+    line-height: 40px;
+    margin: 0 0 0 10px;
+    color: #2E8F9A;
+    font-size: 24px;
+}
+.fancybox-title form.addtocart .cart .price .price_new {
+    font-size: 24px;
+}
+/** badge */
+.image, .prev {
+    position: relative;
+}
+.badge { z-index: 99; position: absolute; top: 10px; right: 10px; display: table; background: #fff; border-radius: 50%; border: 4px double rgba(0,0,0,0.3); width: 30px; height: 30px; transform: rotate(-13deg); -webkit-transform: rotate(-13deg); -moz-transform: rotate(-13deg); -o-transform: rotate(-13deg); box-shadow: 0 3px 10px rgba(0,0,0,0.3); color: #000; font-weight: bold; font-style: italic; font-size: 14px; padding: 11px 13px 15px; }
+.badge span { display: table-cell; vertical-align: middle; text-align: center; line-height: 1.2em; }
+.badge.new { background: #ff4; color: #000; }
+.badge.bestseller { background: #74ff30; color: #030; }
+.badge.low-price { background: #ffc2e3; color: #300; }
+
+ul.thumbs .badge { font-size: 1.05em; width: 70px; height: 70px; padding: 2px; }
+ul.thumbs .badge span { width: 68px; margin-top: 28px; overflow: hidden; }
+table.table { margin: 20px 0; }
+table.table .image { margin-right: 10px; width: 48px; }
+table.table .badge { font-size: 0.8em; width: 24px; height: 24px; padding: 3px 3px 4px; border: 0; }
+table.table .badge span { display: block; width: 20px; overflow: hidden; padding-top: 6px; padding-left: 3px; }
+
+/** compare products */
+tbody tr:nth-child(even) {
+   background-color: #ccc;
+}
+.grid_product .product {
+    height: 340px;
+}
+.product-rating {
+    height: 15px;
+    margin: 0 0 5px 15px;
+}
+.product-rating span {
+    color: #777777;
+    font: 11px/16px Segoeui,Arial,Verdana,serif;
+    margin: 0 0 0 5px;
+}
+#crossssUlBlock .product, #block_nav_primary .product { height: 320px; }

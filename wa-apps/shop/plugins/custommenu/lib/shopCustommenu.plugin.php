@@ -1,17 +1,23 @@
 <?php
 class shopCustommenuPlugin extends shopPlugin {
+    
+    protected static $plugin;
+    
     public function addBackendSettings() {
         return array('aux_li' => '<li class="small float-right"><a href="?plugin=custommenu&action=list">Custom Menu</a></li>');
     }
-    
-    public function displayMenu() {
-        waSystem::getInstance()->getResponse()->addCss('wa-apps/shop/plugins/custommenu/css/backend.css');
-        //$html = '<ul id="nav">';
+    protected static function getThisPlugin() {
+        if (self::$plugin) {
+            return self::$plugin;
+        } else {
+            return wa()->getPlugin('custommenu');
+        }
+    }
+    public static function displayMenu($menu_id) {
+        $plugin = self::getThisPlugin();
         $BA = new shopCustommenuPluginBackendActions();
-        $items = $BA->getMenuItems(1);
-        //echo '<pre>';var_dump($items);die;
-        $html = $this->renderMenu($items,0,0);
-        //$html .= '</ul>';
+        $items = $BA->getMenuItems($menu_id);
+        $html = $plugin->renderMenu($items,0,0);
         return $html;
     }
     
@@ -48,7 +54,7 @@ class shopCustommenuPlugin extends shopPlugin {
                                   <div class="cart">
                                     <div class="price">
                                     <div class="vert">
-                                      <div class="price_new">'. shop_currency($product['price']) .'</div>
+                                      <div class="price_new">'. shop_currency(ceil($product['price'])) .'</div>
                                       '.($product['compare_price'] > 0 ? '<div class="price_old" itemprop="price">'. shop_currency(ceil($product['compare_price'])) .'</div>' : '') .' 
                                     </div>
                                     </div>

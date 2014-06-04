@@ -22,14 +22,18 @@ class waAPIController
             $callback = (string)waRequest::get('callback', false);
             // for JSONP
             if ($callback) {
+                wa()->getResponse()->setStatus(200);
                 wa()->getResponse()->addHeader('Content-type', 'text/javascript; charset=utf-8');
-                $response = $callback .'('.$response.');';
+                echo $callback .'(';
             } else {
                 wa()->getResponse()->addHeader('Content-type', 'application/json; charset=utf-8');
             }
         }
         wa()->getResponse()->sendHeaders();
         echo waAPIDecorator::factory($this->format)->decorate($response);
+        if (!empty($callback)) {
+            echo ');';
+        }
     }
 
     public function dispatch()
@@ -116,7 +120,7 @@ class waAPIController
                     throw new waAPIException('invalid_token', 'Access token has expired', 401);
                 }
                 // auth user
-                wa()->setCommonFactory('auth_user', new waUser($data['contact_id']));
+                wa()->setUser(new waUser($data['contact_id']));
                 return $data;
             }
             throw new waAPIException('invalid_token', 'Invalid access token', 401);

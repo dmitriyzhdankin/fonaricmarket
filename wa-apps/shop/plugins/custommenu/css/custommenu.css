@@ -272,13 +272,14 @@
 
 #block_nav_primary.main-menu {
     position: relative;
-    z-index: 99;
+    z-index: 100;
 }
 
 #block_nav_primary .grid_12.show {
     overflow: visible;
     padding-left: 0;
-    padding-right: 0;  
+    padding-right: 0;
+    border: none;
 }
 ul.custom-menu > li:first-child > a {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -328,6 +329,4 @@ ul.custom-menu div li a:hover {
 
 ul.custom-menu div li .product a:hover {
     background: none;
-}
-.main-menu .container_12 {
 }

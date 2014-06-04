@@ -123,8 +123,8 @@
                        
                 {/if}
             {/foreach}
-            
-            
+
+
              window.location=url; 
             ">
             {* $cat_url *}
@@ -142,7 +142,8 @@
             {/foreach}
     </div>
     {/if}
-
+    {$same_products = shopCustomPlugin::getSameProducts()}
+    {$same_category = shopCustomPlugin::getProductCategory()}
     {if $same_products }
     <!-- products from same category -->
     <div class="same-products">

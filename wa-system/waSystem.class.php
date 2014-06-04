@@ -37,14 +37,10 @@ class waSystem
         try {
             $this->loadFactories();
         } catch (Exception $e) {
+            $app_name = method_exists($config, 'getApplication') ? $config->getApplication() : '';
+            waLog::log('Error initializing waSystem('.$app_name.'): '.$e->getMessage()."\n".wa_dump_helper($config));
             echo $e;
         }
-
-    }
-
-    public static function isLoaded()
-    {
-        return self::$instances !== array();
     }
 
     /**
@@ -73,7 +69,7 @@ class waSystem
         }
 
         if (!isset(self::$instances[$name])) {
-            if ($config === null && self::$current) {
+            if ($config === null && self::$current && !empty(self::$instances[self::$current])) {
                 /**
                  * @var $system waSystem
                  */
@@ -85,6 +81,9 @@ class waSystem
                 self::$instances[$name] = new self($config);
                 if (!self::$instances[$name] instanceof waSystem) {
                     throw new waException(sprintf('Class "%s" is not of the type waSystem.', $config));
+                }
+                if ($config instanceof waAppConfig) {
+                    $config->checkUpdates();
                 }
             } else {
                 throw new waException(sprintf('The "%s" system does not exist.', $name));
@@ -118,7 +117,11 @@ class waSystem
                 self::$factories_config = include($file_path);
             }
         }
-        waLocale::init();
+        if (isset(self::$factories_config['locale'])) {
+            waLocale::init(self::getCommonFactory('locale', 'waLocaleAdapter'));
+        } else {
+            waLocale::init();
+        }
     }
 
     /**
@@ -127,6 +130,11 @@ class waSystem
     public function getFrontController()
     {
         return $this->getFactory('front_controller', 'waFrontController', array());
+    }
+
+    public function getDefaultController()
+    {
+        return $this->getFactory('default_controller', 'waDefaultViewController');
     }
 
     /**
@@ -162,7 +170,7 @@ class waSystem
      * @param mixed $first_param
      * @return mixed
      */
-    public function getFactory($name, $class, $options = array(), $first_param = false)
+    protected function getFactory($name, $class, $options = array(), $first_param = false)
     {
         if ($config = $this->getConfig()->getFactory($name)) {
             if (is_array($config)) {
@@ -189,7 +197,7 @@ class waSystem
      * @param mixed $first_param
      * @return mixed
      */
-    public static function getCommonFactory($name, $class, $options = array(), $first_param = false)
+    protected static function getCommonFactory($name, $class, $options = array(), $first_param = false)
     {
         if (!isset(self::$factories_common[$name])) {
             if (isset(self::$factories_config[$name])) {
@@ -211,12 +219,26 @@ class waSystem
     }
 
     /**
-     * @param string $name
-     * @param object $value
+     * @param string $key
+     * @param int $ttl
+     * @param string $app_id
+     * @return waiCache
      */
-    public function setCommonFactory($name, $value)
+    public function getCache($key, $ttl = 0, $app_id = null)
     {
-        self::$factories_common[$name] = $value;
+        if ($app_id === null) {
+            $app_id = $this->getApp();
+        }
+        $class = isset(self::$factories_config['cache']) ? self::$factories_config['cache'] : 'waSerializeCache';
+        return new $class($key, $ttl, $app_id);
+    }
+
+    /**
+     * @param waUser $user
+     */
+    public function setUser(waUser $user)
+    {
+        self::$factories_common['auth_user'] = $user;
     }
 
     /**
@@ -347,7 +369,7 @@ class waSystem
     public function dispatch()
     {
         try {
-            if (preg_match('/^sitemap-?([a-z0-9_]+)?.xml$/i', $this->config->getRequestUrl(true), $m)) {
+            if (preg_match('/^sitemap-?([a-z0-9_]+)?(-([0-9]+))?.xml$/i', $this->config->getRequestUrl(true), $m)) {
                 $app_id = isset($m[1]) ? $m[1] : 'webasyst';
                 if ($this->appExists($app_id)) {
                     self::getInstance($app_id);
@@ -357,7 +379,11 @@ class waSystem
                          * @var $sitemap waSitemapConfig
                          */
                         $sitemap = new $class();
-                        $sitemap->display();
+                        $n = ifempty($m[3]);
+                        if (!$n) {
+                            $n = 1;
+                        }
+                        $sitemap->display($n);
                     }
                 } else {
                     throw new waException("Page not found", 404);
@@ -398,30 +424,41 @@ class waSystem
                 $route = null;
                 if ($this->getEnv() == 'frontend') {
                     // logout
+                    
                     if (null !== ( $logout_url = waRequest::get('logout'))) {
+                        
+                        // for getting app
+                        $this->getRouting()->dispatch();
+                        $app = waRequest::param('app');
+                        
+                        // For logging logout action
+                        $data = array(
+                            'app_id' => $app,
+                            'contact_id' => $this->getUser()->getId(),
+                            'datetime' => date("Y-m-d H:i:s"),
+                            'action' => 'logout',
+                            'params' => $this->getEnv()
+                        );
+                        
+                        // logout itself
                         $this->getAuth()->clearAuth();
                         if (!$logout_url) {
                             $logout_url = $this->config->getRequestUrl(false, true);
                         }
+                        
+                        // logging logout
+                        if (!class_exists('waLogModel')) {
+                            wa('webasyst');
+                        }
+                        $log_model = new waLogModel();
+                        $log_model->insert($data);
+                        
+                        // make redirect after logout
                         $this->getResponse()->redirect($logout_url);
                     }
+
                     if (!$this->getRouting()->dispatch()) {
-                        $routes = $this->getRouting()->getRoutes();
-                        $redirect = true;
-                        $route = end($routes);
-                        if (isset($route['app'])) {
-                                $redirect = false;
-                                // set routing
-                                foreach ($route as $k => $v) {
-                                    if ($k !== 'url') {
-                                        waRequest::setParam($k, $v);
-                                    }
-                                }
-                                waRequest::setParam('error', 404);
-                        }
-                        if ($redirect) {
-                            $this->getResponse()->redirect($this->getConfig()->getBackendUrl(true), 302);
-                        }
+                        $this->getResponse()->redirect($this->getConfig()->getBackendUrl(true), 302);
                     }
                     $app = waRequest::param('app');
                 } else {
@@ -443,8 +480,14 @@ class waSystem
                     throw new waRightsException('Access to this app denied', 403);
                 }
                 if ((waRequest::param('secure') || waRequest::param('auth')) && !$this->getUser()->isAuth()) {
+                    $auth = $this->getAuthConfig();
+                    if (!empty($auth['app'])) {
+                        $app_system = self::getInstance($auth['app'], null, true);
+                    }
                     $app_system->login();
                 } else {
+
+                
                     $app_system->getFrontController()->dispatch();
                 }
             }
@@ -713,7 +756,7 @@ class waSystem
                 }
             } else {
                 self::$apps = include($file);
-                waLocale::loadByDomain('webasyst');
+                waLocale::loadByDomain('webasyst', $locale);
             }
         }
         if ($system) {
@@ -757,8 +800,10 @@ class waSystem
                         if (!isset(self::$instances['site'])) {
                             self::getInstance('site');
                         }
-                        $domain_model = new siteDomainModel();
-                        $domain_info = $domain_model->getByName($domain);
+                        if (!isset($domain_info)) {
+                            $domain_model = new siteDomainModel();
+                            $domain_info = $domain_model->getByName($domain);
+                        }
                         $name = ($domain_info && $domain_info['title']) ? $domain_info['title'] : $this->accountName();
                     }
                 } else {
@@ -900,7 +945,7 @@ class waSystem
      * @return waPlugin
      * @throws waException
      */
-    public function getPlugin($plugin_id)
+    public function getPlugin($plugin_id, $set_active = false)
     {
         $app_id = $this->getConfig()->getApplication();
         $path = $this->getConfig()->getPluginPath($plugin_id).'/lib/config/plugin.php';
@@ -914,11 +959,23 @@ class waSystem
             if (!isset($plugin_info['app_id'])) {
                 $plugin_info['app_id'] = $app_id;
             }
+            $build_file = $this->getConfig()->getPluginPath($plugin_id).'lib/config/build.php';
+            if (file_exists($build_file)) {
+                $plugin_info['build'] = include($build_file);
+            } else {
+                if (SystemConfig::isDebug()) {
+                    $plugin_info['build'] = time();
+                } else {
+                    $plugin_info['build'] = 0;
+                }
+            }
             // load locale
-            self::pushActivePlugin($plugin_id, $app_id);
             $locale_path = $this->getAppPath('plugins/'.$plugin_id.'/locale', $app_id);
             if (is_dir($locale_path)) {
-                waLocale::load($this->getLocale(), $locale_path, self::getActiveLocaleDomain(), false);
+                waLocale::load($this->getLocale(), $locale_path, $app_id.'_'.$plugin_id, false);
+            }
+            if ($set_active) {
+                self::pushActivePlugin($plugin_id, $app_id);
             }
             return new $class($plugin_info);
         } else {
@@ -930,9 +987,10 @@ class waSystem
      * Trigger event with given $name from current active application.
      * @param string $name
      * @param mixed $params passed to event handlers
+     * @param string[] $array_keys array of expected template items for UI events
      * @return array app_id or plugin_id => data returned from handler (unless null is returned)
      */
-    public function event($name, &$params = null)
+    public function event($name, &$params = null, $array_keys = null)
     {
         $result = array();
         if (is_array($name)) {
@@ -989,7 +1047,7 @@ class waSystem
                     continue;
                 }
                 wa($app_id);
-                include($file_path);
+                include_once($file_path);
                 $class_name = $name;
                 if (strpos($name, '.') !== false) {
                     $class_name = strtok($class_name, '.').ucfirst(strtok(''));
@@ -1026,6 +1084,13 @@ class waSystem
                         waLocale::load($this->getLocale(), $locale_path, self::getActiveLocaleDomain(), false);
                     }
                     if (method_exists($class, $method) && null !== ( $r = $class->$method($params))) {
+                        if ($array_keys && is_array($r)) {
+                            foreach ($array_keys as $k) {
+                                if (!isset($r[$k])) {
+                                    $r[$k] = '';
+                                }
+                            }
+                        }
                         $result[$plugin_id.'-plugin'] = $r;
                     }
                 } catch (Exception $e) {
@@ -1040,8 +1105,8 @@ class waSystem
     /**
      * Return list of application themes
      * @param string $app_id default is current application
-     * @param string $app_id optional to get
-     * @return array
+     * @param string $domain optional to get
+     * @return waTheme[]
      */
     public function getThemes($app_id = null, $domain = null)
     {
@@ -1081,11 +1146,13 @@ class waSystem
 }
 
 /**
- * Alias for waSystem::getInstance()
+ * Convenient form of waSystem::getInstance()
  * @param string $name
+ * @param bool $set_current
  * @return waSystem
  */
-function wa($name = null)
+function wa($name = null, $set_current = false)
 {
-    return waSystem::getInstance($name);
+    return waSystem::getInstance($name, null, $set_current);
 }
+
