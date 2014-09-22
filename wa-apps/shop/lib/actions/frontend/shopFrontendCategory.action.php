@@ -69,7 +69,7 @@ class shopFrontendCategoryAction extends shopFrontendAction
             //echo waRequest::param('category_url')."===";
         }
         $route = wa()->getRouting()->getDomain(null, true).'/'.wa()->getRouting()->getRoute('url');
-        
+
         if (!$category || ($category['route'] && $category['route'] != $route)) {
             throw new waException('Category not found', 404);
         }

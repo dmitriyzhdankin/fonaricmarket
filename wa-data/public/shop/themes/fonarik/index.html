@@ -30,7 +30,7 @@
 		<link href="{$wa_theme_url}custom.mobile.css?{$wa->version()}" rel="stylesheet" type="text/css"/>
 		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" />
     {else}
-        <script type="text/javascript" src="{$wa_theme_url}custom.js"></script>    
+        <script type="text/javascript" src="{$wa_theme_url}custom.js"></script>
 	{/if}
 	{include file="`$wa_active_theme_path`/head.html" inline}
 	{$wa->headJs()}
@@ -47,7 +47,7 @@
 
 	<div class="custom-margins">
 		<div class="container paper">
-		
+
 			<!-- HEADER -->
 			<div id="header" role="navigation sitemap">
 
@@ -95,7 +95,7 @@
 	        		{/if}
                 {/if}
         		<div class="clear-both"></div>
-		
+
 				<!-- website logo/title -->
 				<h2><a href="{$wa_url}">{$wa->accountName()}</a></h2>
 				<!-- main website sections -->
@@ -103,22 +103,22 @@
         			{foreach $wa->apps() as $a}
         				<li{if $a.url==$wa_app_url} class="selected"{/if}><a href="{$a.url}">{$a.name}</a></li>
         			{/foreach}
-        
+
       			</ul>
       			<div class="clear-both"></div>
-      			
+
       		</div>
-      		
+
       		<!-- MAIN CONTENT -->
 			<div id="main">
 				{include file="`$wa_active_theme_path`/content.html" inline}
-			</div>  
-			
+			</div>
+
 			<div class="clear-both"></div>
-			
+
 		</div>
 	</div>
-	
+
 	<!-- FOOTER -->
 	<div class="custom-margins">
 		<div class="container" id="footer">

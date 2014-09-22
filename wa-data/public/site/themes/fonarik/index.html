@@ -3,12 +3,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>{if $my_r_title}{$my_r_title}{else}{$wa->title()|escape}{/if}</title>
-<meta name="Keywords" content="{if $my_r_keywords}{$my_r_description}{else}{$wa->meta('keywords')|escape}{/if}">
-<meta name="Description" content="{if $my_r_description}{$my_r_keywords}{else}{$wa->meta('description')|escape}{/if}">
+<title>{if $my_r_title}{$my_r_title}{else}{if $product && $product.name == $wa->title()}{$wa->title()|escape}: купить {$wa->title()|escape}, лучшая цена в интернет-магазине fonarik-market.ru{else}{$wa->title()|escape}{/if}{/if}</title>
+<meta name="Keywords" content="{if $my_r_keywords}{$my_r_description}{else}{if $wa->meta('keywords')}{$wa->meta('keywords')|escape}{else}{if $product}{$wa->title()|escape}, купить {$wa->title()|escape}, {$wa->title()|escape} цена, интернет магазин, fonarik-market.ru{/if}{/if}{/if}">
+<meta name="Description" content="{if $my_r_description}{$my_r_keywords}{else}{if $wa->meta('description') }{$wa->meta('description')|escape}{else}{if $product}{$wa->title()|escape} в интернет-магазине fonarik-market.ru. Хотите купить {$wa->title()|escape} по выгодной цене? Заходите в наш интернет-магазин fonarik-market.ru!{/if}{/if}{/if}">
 <meta name="google-site-verification" content="HgxM5mlLK6npvnMkRhl7Bcs-1uABQjKYeeq6zbmKtb0">
 <meta name="yandex-verification" content="5eb55ef94d5b056b" >
-{if waRequest::get(page) || waRequest::get(sort) || waRequest::get(view) || $wa->currentUrl(0, 1)|strpos:'/tag/' !== false || $wa->currentUrl(0, 1)|strpos:'/search/' !== false }
+{if waRequest::get(page) || waRequest::get(sort) || waRequest::get(view) 
+    || $wa->currentUrl(0, 1)|strpos:'/tag/' !== false || $wa->currentUrl(0, 1)|strpos:'/search/' !== false || $wa->currentUrl(0, 1)|strpos:'/compare/' !== false || $wa->currentUrl(0, 1)|strpos:'/reviews/' !== false }
 <meta name="robots" content="noindex,follow" />
 {/if}
     <script type="text/javascript" src="{$wa_url}wa-content/js/jquery/jquery-1.8.2.min.js"></script>
@@ -123,5 +124,6 @@ left: 320px!important;
 <body> 
   {include file="`$wa_active_theme_path`/content.html" inline}
   {literal}<script id="CrossssGoScr" type="text/javascript">(function(){var f = function(){var s = document.createElement("script");document.getElementsByTagName("HEAD")[0].appendChild(s);s.type="text/javascript";s.async=true;s.src="http://crossss.com/crossssInfo.aspx?id=468";};if (navigator.userAgent.toLowerCase().indexOf("opera")!=-1){document.addEventListener("DOMContentLoaded",f,false);}else{f();} })();</script>{/literal}
+  <img style="display:none;" src="//a.marketgid.com/1x1.gif?id=244405&type=c&g=x&t=x&tg=&v=1&r=">
 </body>
 </html>

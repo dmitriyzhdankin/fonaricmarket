@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="706e9b52-facf-48f3-9ad7-6e787233974f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/blog/js/blog-post-edit.min.js" afterPath="$PROJECT_DIR$/wa-apps/blog/js/blog-post-edit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/blog/js/blog.min.js" afterPath="$PROJECT_DIR$/wa-apps/blog/js/blog.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/cart.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.success.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.success.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-system/auth/adapters/facebookAuth.class.php" afterPath="$PROJECT_DIR$/wa-system/auth/adapters/facebookAuth.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/site/index.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/site/themes/fonarik/index.html" afterPath="$PROJECT_DIR$/wa-data/public/site/themes/fonarik/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/list-thumbs.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/list-thumbs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/reviews.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/reviews.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/shop/plugins/custom/lib/actions/shopCustomPluginBackendCopyProducts.controller.php" afterPath="$PROJECT_DIR$/wa-apps/shop/plugins/custom/lib/actions/shopCustomPluginBackendCopyProducts.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCategory.action.php" afterPath="$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCategory.action.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/css/style.css" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/css/style.css" />
+    </list>
+    <ignored path="fonarik-market.loc.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="fonarik-market.loc" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="10" selection-start="1969" selection-end="1969" vertical-scroll-proportion="8.666667" vertical-offset="969" max-vertical-offset="2533">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/site/themes/fonarik/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="7" selection-start="0" selection-end="4424" vertical-scroll-proportion="-12.769231" vertical-offset="1742" max-vertical-offset="2278">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/blog/themes/default/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2414">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="281" column="14" selection-start="11866" selection-end="11866" vertical-scroll-proportion="0.5691203" vertical-offset="4460" max-vertical-offset="7310">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/blog/themes/default/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/blog/themes/default/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="43" selection-start="5660" selection-end="5660" vertical-scroll-proportion="-24.846153" vertical-offset="1428" max-vertical-offset="2499">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/site/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="0" selection-start="3591" selection-end="3591" vertical-scroll-proportion="-9.269231" vertical-offset="1408" max-vertical-offset="2261">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/site/themes/fonarik/theme.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/theme.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="42" selection-start="1377" selection-end="1412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2788">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/wa-data/protected/wa-installer/backup/wa-apps/shop/lib/model/shopCategory.model.php" />
+        <option value="$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCategory.action.php" />
+        <option value="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/cart.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/site/themes/fonarik/index.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/blog/themes/fonarik/index.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/blog/themes/fonarik/content.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/blog/themes/fonarik/theme.xml" />
+        <option value="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/site/index.html" />
+        <option value="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonarik-market.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wa-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ubuntu_server\html\fonarik-market.loc\wa-data\public\blog\themes\fonarik" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="706e9b52-facf-48f3-9ad7-6e787233974f" name="Default" comment="" />
+      <created>1408039945686</created>
+      <updated>1408039945686</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32829374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27902022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/classes/shopHelper.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="266" column="20" selection-start="11912" selection-end="11917" vertical-scroll-proportion="0.0" vertical-offset="4193" max-vertical-offset="9605" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/model/shopProduct.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="571" column="46" selection-start="20659" selection-end="20659" vertical-scroll-proportion="0.0" vertical-offset="9441" max-vertical-offset="12427" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-system/captcha/waCaptcha.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="90" selection-start="4987" selection-end="4987" vertical-scroll-proportion="0.0" vertical-offset="1911" max-vertical-offset="3077" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.contactinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="30" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.payment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.shipping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="4539" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/default/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/default/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="60" selection-start="3514" selection-end="3525" vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="2193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="8" selection-start="5540" selection-end="5540" vertical-scroll-proportion="0.0" vertical-offset="1684" max-vertical-offset="3060" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/protected/wa-installer/backup/wa-apps/shop/lib/model/shopCategory.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="64" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="11339" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCategory.action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2924" selection-end="2924" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2771" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/SystemConfig.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/protected/wa-installer/backup/wa-apps/shop/lib/model/shopCategory.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="64" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11339" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/protected/wa-installer/backup/wa-apps/shop/lib/model/shopCategory.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="64" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.2924312" vertical-offset="1071" max-vertical-offset="11339" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCategory.action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2924" selection-end="2924" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2771" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/SystemConfig.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="921" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.payment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.shipping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="877" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/default/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/default/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="60" selection-start="3514" selection-end="3525" vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="2193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="8" selection-start="5540" selection-end="5540" vertical-scroll-proportion="0.11757858" vertical-offset="1684" max-vertical-offset="3060" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-system/captcha/waCaptcha.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="90" selection-start="4987" selection-end="4987" vertical-scroll-proportion="0.0" vertical-offset="1911" max-vertical-offset="3077" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/model/shopProduct.model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="571" column="46" selection-start="20659" selection-end="20659" vertical-scroll-proportion="0.30504587" vertical-offset="9441" max-vertical-offset="12427" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/classes/shopHelper.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="266" column="20" selection-start="11912" selection-end="11917" vertical-scroll-proportion="0.0" vertical-offset="4193" max-vertical-offset="9605" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-cache/apps/webasyst/cache/app_settings/shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="9" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.0" vertical-offset="2029" max-vertical-offset="4216" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/reviews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="138" selection-start="8927" selection-end="8932" vertical-scroll-proportion="0.6461001" vertical-offset="2726" max-vertical-offset="3621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.contactinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="42" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="3410" max-vertical-offset="4539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/apps/shop/workflow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="5280" max-vertical-offset="6154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/apps/shop/plugins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/apps/shop/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="775" max-vertical-offset="1649">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/apps/site/domains/fonarik-market.ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-config/apps/shop/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="30" selection-start="984" selection-end="984" vertical-scroll-proportion="-22.653847" vertical-offset="176" max-vertical-offset="1071">
+          <folding>
+            <marker date="1409514212927" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="55.46154" vertical-offset="1442" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/theme.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="42" selection-start="1377" selection-end="1412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2788">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="627" column="33" selection-start="31364" selection-end="31364" vertical-scroll-proportion="-16.461538" vertical-offset="10231" max-vertical-offset="11118">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/site/themes/fonarik/theme.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/blog/themes/default/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/blog/themes/default/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="0" selection-start="3591" selection-end="3591" vertical-scroll-proportion="-9.269231" vertical-offset="1408" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/site/themes/fonarik/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="7" selection-start="0" selection-end="4424" vertical-scroll-proportion="-12.769231" vertical-offset="1742" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/blog/themes/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="43" selection-start="5660" selection-end="5660" vertical-scroll-proportion="-24.846153" vertical-offset="1428" max-vertical-offset="2499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="10" selection-start="1969" selection-end="1969" vertical-scroll-proportion="8.666667" vertical-offset="969" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="281" column="14" selection-start="11866" selection-end="11866" vertical-scroll-proportion="0.5691203" vertical-offset="4460" max-vertical-offset="7310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
