@@ -2,7 +2,7 @@
 class shopCustommenuPlugin extends shopPlugin {
     
     protected static $plugin;
-    
+
     public function addBackendSettings() {
         return array('aux_li' => '<li class="small float-right"><a href="?plugin=custommenu&action=list">Custom Menu</a></li>');
     }
@@ -10,7 +10,11 @@ class shopCustommenuPlugin extends shopPlugin {
         if (self::$plugin) {
             return self::$plugin;
         } else {
-            return wa()->getPlugin('custommenu');
+            $info = array(
+                'id' => 'custommenu',
+                'app_id' => 'shop'
+            );
+            return new shopCustommenuPlugin($info);
         }
     }
     public static function displayMenu($menu_id) {
@@ -20,7 +24,7 @@ class shopCustommenuPlugin extends shopPlugin {
         $html = $plugin->renderMenu($items,0,0);
         return $html;
     }
-    
+
     private function renderMenu($items,$parent_id,$level) {
         $html = '';
         if(isset($items[$parent_id])) {
@@ -46,7 +50,7 @@ class shopCustommenuPlugin extends shopPlugin {
                     $wa = new shopViewHelper(waSystem::getInstance());
                     $product = $wa->product($item['url']);
                     $html .= '<li>
-                                <div class="grid_3 product">             
+                                <div class="grid_3 product">
                                   <div class="prev"><a href="'. $wa->productUrl($product) .'" title="'. $product['name'] . ($product['summary'] ? '&mdash; '. strip_tags($product['summary']) : '') .'">
                                         '. $wa->productImgHtml($product, '200x200', array('itemprop' => 'image', 'default' => "", 'alt' => $product['name']) ) .'
                                   </a></div>
@@ -55,7 +59,7 @@ class shopCustommenuPlugin extends shopPlugin {
                                     <div class="price">
                                     <div class="vert">
                                       <div class="price_new">'. shop_currency(ceil($product['price'])) .'</div>
-                                      '.($product['compare_price'] > 0 ? '<div class="price_old" itemprop="price">'. shop_currency(ceil($product['compare_price'])) .'</div>' : '') .' 
+                                      '.($product['compare_price'] > 0 ? '<div class="price_old" itemprop="price">'. shop_currency(ceil($product['compare_price'])) .'</div>' : '') .'
                                     </div>
                                     </div>
                                     <form class="addtocart" method="post" action="'. waSystem::getInstance()->getRouteUrl('/frontendCart/add') .'">

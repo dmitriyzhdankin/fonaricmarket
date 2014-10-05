@@ -6,6 +6,7 @@ return array(
     'vendor'=>'webasyst',
     'version'=>'992482',
     'img'=>'img/brands.png',
+    'frontend'    => true,
     'icons'=>array(
         16 => 'img/brands.png',
     ),

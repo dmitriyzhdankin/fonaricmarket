@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="fonarik" system="1" vendor="webasyst" author="Webasyst" app="shop" parent_theme_id="site:fonarik" version="1.0.0">
+<theme id="fonarik" system="1" vendor="webasyst" author="Webasyst" app="shop" version="1.0.0">
     <name locale="en_US">fonarik</name>
     <name locale="ru_RU">fonarik</name>
     <files>
-        <file path="index.html" custom="0" parent="1">
+        <file path="index.html" custom="0">
         </file>
         <file path="custom.css" custom="0" parent="1">
         </file>

@@ -3962,7 +3962,7 @@ div.wa-value input[type="radio"] {
 }
 .main_text {
 	width: 983px;
-	margin: 0 auto 10px auto;
+	margin: 20px auto 10px auto;
 }
 .main_text p {
 	padding: 10px 0 0 0;
@@ -4353,3 +4353,95 @@ tbody tr:nth-child(even) {
     margin: 0 0 0 5px;
 }
 #crossssUlBlock .product, #block_nav_primary .product { height: 320px; }
+
+/** BLOG */
+.text.conten_service_page_block, .post.conten_service_page_block {
+    padding: 25px;
+    margin-bottom: 15px;
+    float: left;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 7px rgba(50, 50, 50, 0.33);
+    width: 680px;
+}
+.conten_service_page_block img {
+    max-width: 100%;
+}
+.post .credentials {
+    margin-bottom: 20px;
+}
+.credentials {
+    line-height: 1.3em;
+    overflow: hidden;
+}
+
+/** Homepage posts */
+.home_page_news_block {
+    max-height: 520px;
+    margin-left: 10px;
+    overflow-y: auto;
+}
+.homepage_posts img {
+     float: left;
+     margin-right: 10px;
+     width: 180px;
+ }
+.homepage_posts .post {
+    margin-top: 15px;
+}
+.homepage_posts h3 {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 0 10px;
+    width: 280px;
+}
+.homepage_posts h3 a {
+    color: #000000;
+    text-decoration: none;
+}
+.homepage_posts-header, .homepage_review-header {
+    background: none repeat scroll 0 0 #002e52;
+    color: #a0b3b9;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 45px;
+    padding: 0 0 0 10px;
+}
+.homepage_review-header {
+    color: #D3D3D3;
+    background: #717171;
+}
+
+.product_img {
+    float: left;
+    margin-right: 10px;
+    width: 110px;
+}
+.review-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+.review-title > a {
+    color: #000;
+    text-decoration: none;
+}
+.child_review {
+    background: none repeat scroll 0 0 #e3f6fc;
+    margin: 10px 0 0 10px;
+    padding: 5px 5px 5px 10px;
+}
+.home_review {
+    margin-top: 10px;
+}
+.home_review .autor {
+    font-weight: bold;
+}
+.review-rating .text {
+    color: #777;
+    float: left;
+    line-height: 16px;
+    margin: 0 5px 0 0;
+}
+/** END Homepage posts */
+/** END BLOG */

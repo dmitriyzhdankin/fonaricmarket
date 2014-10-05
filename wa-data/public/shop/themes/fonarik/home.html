@@ -161,6 +161,62 @@
 </div><!-- .carousel -->
 </div>
 {/if}
+<!--div class="container_12 home_page_news_blocks">
+    <div class="grid_6 homepage_posts">
+        <div class="homepage_posts-header">Новости</div>
+        <div class="home_page_news_block">
+        {$wa->block("blog.latest_posts")}
+        </div>
+    </div>
+    <div class="grid_6 homepage_reviews">
+
+        <div class="homepage_review-header">Отзывы</div>
+        <div class="home_page_news_block">
+            {$last_comments = shopCustomPlugin::getLastComments(3)}
+            {if $last_comments}
+                {foreach $last_comments as $comment}
+
+                <div class="home_review">
+                    <div class="product_img"><a href="{$wa->getUrl('/frontend/product', ['product_url' => $comment['product_data'].url])}">
+                        {$wa->shop->getProductImgHtml($comment['product_data'], '110x110', ['itemprop' => 'image', 'id' => 'product-image', 'title' => $comment['product_data'].name|escape|cat:' ':strip_tags($comment['product_data'].summary)|escape, 'alt' => $comment['product_data'].name])}
+                    </a></div>
+                    <div class="review_body">
+                        <div class="review-title"><a href="{$wa->getUrl('/frontend/product', ['product_url' => $comment['product_data'].url])}">{$comment['product_data'].name}</a></div>
+                        {if !$comment.parent_id && !empty($comment.rate)}
+                            <div class="review-rating">
+                                <div class="text">Рейтинг:</div>
+                                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    {$rate = round($comment.rate)}
+                                    <meta itemprop="worstRating" content = "1">
+                                    <meta itemprop="ratingValue" content="{$comment.rate}">
+                                    <meta itemprop="bestRating" content = "5">
+                                    {$wa->shop->ratingHtml($comment.rate)}
+                                </span>
+                            </div>
+                            <br />
+                        {/if}
+                        <div class="autor" itemprop="author">{$comment.author.name}</div>
+                        <div class="review_text">{$comment.text|truncate:200}{if $comment.text|count_characters:true > 200}<a class="review_link" href="{$wa->shop->productUrl($comment['product_data'], 'reviews')}">Подробнее</a>{/if}</div>
+                    </div>
+                    <div class="clear"></div>
+                    {if $comment['child_review']}
+                    {foreach $comment['child_review'] as $child_review}
+                    <div class="child_review">
+                        <div class="autor" itemprop="author">{$comment.author.name}</div>
+                        <div class="review_text">{$child_review.text|truncate:180}{if $child_review.text|count_characters:true > 180}<a class="review_link" href="{$wa->shop->productUrl($comment['product_data'], 'reviews')}">Подробнее</a>{/if}</div>
+                    </div>
+                    {/foreach}
+                    {/if}
+                </div>
+                <div class="clear"></div>
+                {/foreach}
+            {/if}
+        </div>
+    </div>
+
+</div>
+<div class="clear"></div-->
+
 <div class="main_text">
   <p>Fonarik-market.ru — интернет магазин фонариков, походного снаряжения, туристических ножей и иных товаров для активного отдыха — готов предложить своим посетителям очень широкий ассортимент качественной продукции от ведущих производителей со всего мира.</p>
   <p>В настоящее время приобрести что-либо, не выходя при этом из дома — дело весьма привычное и обыденное, и единственное, что может беспокоить покупателя — это соответствие товара картинке и завяленным данным, эффективная помощь и соблюдение гарантийных обязательств. Как ни странно, нам о переживаниях клиентов тоже всё известно, поэтому все вышеперечисленные детали учтены и проработаны, а лучшие решения взяты на вооружение — пользуйтесь в удовольствие.</p>

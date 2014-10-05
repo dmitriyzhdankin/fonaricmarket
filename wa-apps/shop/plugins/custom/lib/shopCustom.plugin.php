@@ -72,4 +72,25 @@ class shopCustomPlugin extends shopPlugin {
         $reviews_model = new shopProductReviewsModel();
         return $reviews_model->count($product_id, false);
     }
+
+    public static function getLastComments($limit = 2) {
+        $reviews_model = new shopProductReviewsModel();
+        $product_model = new shopProductModel();
+        $options = array(
+            'limit'=> $limit,
+            'where' => array('parent_id' => 0)
+        );
+        $parent_reviews = $reviews_model->getList('*,is_new,contact,product',$options);
+
+        foreach( $parent_reviews as &$review ) {
+            $options = array(
+                'limit'=> 1,
+                'where' => array('review_id' => $review['id'])
+            );
+            $review['child_review'] = $reviews_model->getList('*,is_new,contact,product',$options);
+
+            $review['product_data'] = $product_model->getById($review['product_id']);
+        }
+        return $parent_reviews;
+    }
 }
