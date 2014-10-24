@@ -121,7 +121,7 @@ $(document).ready(function() {
                         <div class="corner top right">{$badge_html}</div>
                     {/if}
                     {$wa->shop->getImageBadgeHtml($product.images[$product.image_id])}
-                    {$bigImage =  $wa->shop->getProductImgHtml($product, '750x0')|regex_replace:'/^.+src="([^"]+)".*$/':'\1'}                
+                    {$bigImage =  $wa->shop->getProductImgHtml($product, '1000x0')|regex_replace:'/^.+src="([^"]+)".*$/':'\1'}
                <div class="preview slides_container">
                     <div class="prev_bg">
                        <a href="{$bigImage}" class="fancybox-button" rel="fancybox-button" data-title-id="add_to_cart_popup">
@@ -134,7 +134,7 @@ $(document).ready(function() {
             {if count($product.images) > 1}
                <ul class="pagination clearfix" id="thumblist">
                     {foreach $product.images as $image}       
-                        {$bImage =  $wa->shop->getProductImgHtml(['id'=> $product.id, 'image_id' => $image.id, 'ext' => $image.ext], '750x0')|regex_replace:'/^.+src="([^"]+)".*$/':'\1'}
+                        {$bImage =  $wa->shop->getProductImgHtml(['id'=> $product.id, 'image_id' => $image.id, 'ext' => $image.ext], '1000x0')|regex_replace:'/^.+src="([^"]+)".*$/':'\1'}
                         {if $bigImage != $bImage }
                                 <li><a class="fancybox-button" rel="fancybox-button" href="{$bImage}" data-title-id="add_to_cart_popup">
                                         {$wa->shop->getProductImgHtml(['id'=> $product.id, 'image_id' => $image.id, 'ext' => $image.ext], '96x96', ['itemprop' => 'image', 'alt' => $product.name])} 

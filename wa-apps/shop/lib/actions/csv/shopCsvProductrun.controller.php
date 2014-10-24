@@ -139,8 +139,10 @@ class shopCsvProductrunController extends waLongActionController
                 if (preg_match('@^f\+:(.+)$@', $target, $matches)) {
                     if ($this->data['rights']) {
                         $id = preg_replace('@\D.*$@', '', $id);
+                        $feature_name = ifset($header[$id], 'csv feature');
+                        $feature_name = substr($feature_name,0,strpos($feature_name,'_|_') ? strpos($feature_name,'_|_') : strlen($feature_name) );
                         $feature = array(
-                            'name'       => ifset($header[$id], 'csv feature'),
+                            'name'       => $feature_name,
                             'type'       => shopFeatureModel::TYPE_VARCHAR,
                             'multiple'   => 0,
                             'selectable' => 0,
@@ -292,7 +294,8 @@ class shopCsvProductrunController extends waLongActionController
                 if ($parents) {
                     $features += $features_model->getById($parents);
                 }
-
+            } elseif ( preg_match('@^type/(.+)$@', $this->data['hash'], $matches) ) {
+                $features = $features_model->getByType($matches[1]);
             } else {
                 $features = $features_model->getAll();
             }
@@ -300,7 +303,7 @@ class shopCsvProductrunController extends waLongActionController
                 $options['features'] = true;
                 foreach ($features as $feature) {
                     if (!preg_match('/\.\d$/', $feature['code']) && ($feature['type'] != shopFeatureModel::TYPE_DIVIDER)) {
-                        $map[sprintf('features:%s', $feature['code'])] = $feature['name'];
+                        $map[sprintf('features:%s', $feature['code'])] = $feature['name'] .'_|_'. $feature['code'];
                         if ($encoding != 'UTF-8') {
                             $this->data['composite_features'][$feature['code']] = true;
                         }

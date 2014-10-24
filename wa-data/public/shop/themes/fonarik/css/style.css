@@ -4297,7 +4297,7 @@ div.wa-value input[type="radio"] {
 /** fancybox */
 .fancybox-title form.addtocart .cart {
     height: 40px;
-    margin: -60px auto 0;
+    margin: 0 auto;
     width: 235px;
 }
 .fancybox-title form.addtocart input[type="submit"], .fancybox-title input.bay {
