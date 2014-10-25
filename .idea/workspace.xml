@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="706e9b52-facf-48f3-9ad7-6e787233974f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/fancybox/jquery.fancybox.css" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/fancybox/jquery.fancybox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/shop/lib/actions/csv/shopCsvProductrun.controller.php" afterPath="$PROJECT_DIR$/wa-apps/shop/lib/actions/csv/shopCsvProductrun.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/shop/lib/classes/shopCsvReader.class.php" afterPath="$PROJECT_DIR$/wa-apps/shop/lib/classes/shopCsvReader.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/shop/lib/model/shopFeature.model.php" afterPath="$PROJECT_DIR$/wa-apps/shop/lib/model/shopFeature.model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/css/style.css" afterPath="$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCheckout.action.php" afterPath="$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCheckout.action.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wa-system/view/waViewHelper.class.php" afterPath="$PROJECT_DIR$/wa-system/view/waViewHelper.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fonarik-market.loc.iws" />
@@ -31,81 +27,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fonari-v-sankt-peterburge/site/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="10" selection-start="944" selection-end="944" vertical-scroll-proportion="0.65384614" vertical-offset="306" max-vertical-offset="2261">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="waViewHelper.class.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="waViewHelper.class.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wa-system/view/waViewHelper.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="6" selection-start="5314" selection-end="5317" vertical-scroll-proportion="-13.076923" vertical-offset="2652" max-vertical-offset="16830">
+            <state line="168" column="40" selection-start="0" selection-end="33153" vertical-scroll-proportion="0.12171838" vertical-offset="2754" max-vertical-offset="16847">
               <folding>
-                <marker date="1401993228697" expanded="true" signature="5284:5788" placeholder="..." />
-                <marker date="1401993228697" expanded="true" signature="5463:5775" placeholder="{...}" />
-                <marker date="1401993228697" expanded="true" signature="28432:28723" placeholder="..." />
-                <marker date="1401993228697" expanded="true" signature="28480:28712" placeholder="{...}" />
-                <marker date="1401993228697" expanded="true" signature="29828:29989" placeholder="SELECT c.id ..wa_contact_emails..." />
+                <marker date="1414228139724" expanded="true" signature="5261:5756" placeholder="..." />
+                <marker date="1414228139724" expanded="true" signature="5289:5508" placeholder="{...}" />
+                <marker date="1414228139724" expanded="true" signature="5340:5380" placeholder="{...}" />
+                <marker date="1414228139724" expanded="true" signature="28400:28691" placeholder="..." />
+                <marker date="1414228139724" expanded="true" signature="28448:28680" placeholder="{...}" />
+                <marker date="1414228139724" expanded="true" signature="29796:29957" placeholder="SELECT c.id ..wa_contact_emails..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html">
+      <file leaf-file-name="shopCustommenu.plugin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-apps/shop/plugins/custommenu/lib/shopCustommenu.plugin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="123" selection-start="10268" selection-end="10268" vertical-scroll-proportion="-11.115385" vertical-offset="4165" max-vertical-offset="7310">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#form#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="21" selection-start="3828" selection-end="3828" vertical-scroll-proportion="0.5074627" vertical-offset="1887" max-vertical-offset="11118">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="153.46153" vertical-offset="3990" max-vertical-offset="4539">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.payment.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.payment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="357">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.shipping.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.shipping.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.692307" vertical-offset="382" max-vertical-offset="918">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkout.success.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.success.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="578">
+            <state line="13" column="25" selection-start="448" selection-end="448" vertical-scroll-proportion="-7.1923075" vertical-offset="34" max-vertical-offset="1615">
               <folding />
             </state>
           </provider>
@@ -114,7 +55,7 @@
       <file leaf-file-name="shopFrontendCheckout.action.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCheckout.action.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="45" selection-start="6289" selection-end="6309" vertical-scroll-proportion="-9.0" vertical-offset="2248" max-vertical-offset="5797">
+            <state line="147" column="44" selection-start="0" selection-end="13471" vertical-scroll-proportion="-18.076923" vertical-offset="2029" max-vertical-offset="5729">
               <folding />
             </state>
           </provider>
@@ -123,7 +64,43 @@
       <file leaf-file-name="waResponse.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wa-system/response/waResponse.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="298" column="20" selection-start="7251" selection-end="7251" vertical-scroll-proportion="-7.3461537" vertical-offset="4875" max-vertical-offset="7038">
+            <state line="310" column="38" selection-start="7469" selection-end="7487" vertical-scroll-proportion="46.884617" vertical-offset="6489" max-vertical-offset="7038">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="siteSettings.action.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-apps/site/lib/actions/settings/siteSettings.action.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="35" selection-start="2876" selection-end="2876" vertical-scroll-proportion="-6.8461537" vertical-offset="995" max-vertical-offset="2703">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="waController.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/protected/wa-installer/backup/wa-system/controller/waController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="123" column="20" selection-start="2969" selection-end="2969" vertical-scroll-proportion="-7.6153846" vertical-offset="1893" max-vertical-offset="4488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="5" selection-start="4795" selection-end="4799" vertical-scroll-proportion="-40.666668" vertical-offset="0" max-vertical-offset="2278">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="66.34615" vertical-offset="1725" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
@@ -190,6 +167,8 @@
         <option value="$PROJECT_DIR$/wa-apps/shop/lib/actions/csv/shopCsvProductrun.controller.php" />
         <option value="$PROJECT_DIR$/wa-system/locale/waLocale.class.php" />
         <option value="$PROJECT_DIR$/wa-apps/shop/lib/model/shopFeature.model.php" />
+        <option value="$PROJECT_DIR$/wa-system/view/waViewHelper.class.php" />
+        <option value="$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCheckout.action.php" />
       </list>
     </option>
   </component>
@@ -360,7 +339,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fonarik.loc" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="settings.github" />
@@ -408,7 +387,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32829374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29659212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -466,36 +445,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wa-system/waSystem.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="571" column="48" selection-start="19271" selection-end="19271" vertical-scroll-proportion="-9.807693" vertical-offset="9452" max-vertical-offset="19788" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="36.0" vertical-offset="936" max-vertical-offset="2295" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wa-system/database/waNestedSetModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="377" column="34" selection-start="12518" selection-end="12518" vertical-scroll-proportion="0.57796013" vertical-offset="5916" max-vertical-offset="8959" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wa-system/database/waModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="696" column="33" selection-start="20083" selection-end="20083" vertical-scroll-proportion="-3.0769231" vertical-offset="11752" max-vertical-offset="15300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/model/shopImportexport.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="930" selection-end="930" vertical-scroll-proportion="-12.961538" vertical-offset="190" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/model/shopProductReviews.model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="901" selection-end="901" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="9894" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/list-thumbs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="3" selection-start="3" selection-end="28" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="697" />
@@ -529,11 +478,6 @@
     <entry file="file://$PROJECT_DIR$/wa-apps/blog/lib/layouts/blogFrontend.layout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="38" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.5640732" vertical-offset="0" max-vertical-offset="874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wa-apps/shop/plugins/custommenu/lib/shopCustommenu.plugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="158" selection-start="2181" selection-end="2296" vertical-scroll-proportion="0.1904762" vertical-offset="754" max-vertical-offset="1615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-config/routing.php">
@@ -635,17 +579,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-system/helper/misc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="9" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-11.538462" vertical-offset="1247" max-vertical-offset="4216" />
+        <state line="91" column="9" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-11.538462" vertical-offset="1247" max-vertical-offset="4216">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-system/locale/data/en_US.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="879">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-system/locale/data/ru_RU.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-system/locale/waLocale.class.php">
@@ -702,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="16" selection-start="2018" selection-end="2024" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="2278">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fonari-v-sankt-peterburge/site/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="10" selection-start="944" selection-end="944" vertical-scroll-proportion="0.65384614" vertical-offset="306" max-vertical-offset="2261">
@@ -716,31 +659,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wa-system/view/waViewHelper.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="6" selection-start="5314" selection-end="5317" vertical-scroll-proportion="-13.076923" vertical-offset="2652" max-vertical-offset="16830">
-          <folding>
-            <marker date="1401993228697" expanded="true" signature="5284:5788" placeholder="..." />
-            <marker date="1401993228697" expanded="true" signature="5463:5775" placeholder="{...}" />
-            <marker date="1401993228697" expanded="true" signature="28432:28723" placeholder="..." />
-            <marker date="1401993228697" expanded="true" signature="28480:28712" placeholder="{...}" />
-            <marker date="1401993228697" expanded="true" signature="29828:29989" placeholder="SELECT c.id ..wa_contact_emails..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/content.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="262" column="123" selection-start="10268" selection-end="10268" vertical-scroll-proportion="-11.115385" vertical-offset="4165" max-vertical-offset="7310">
           <folding>
-            <element signature="n#style#0;n#a#0;n#form#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="153.46153" vertical-offset="3990" max-vertical-offset="4539">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.963158" vertical-offset="3969" max-vertical-offset="4539">
           <folding />
         </state>
       </provider>
@@ -754,7 +684,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/checkout.shipping.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.692307" vertical-offset="382" max-vertical-offset="918">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6481149" vertical-offset="361" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
@@ -766,24 +696,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="26" selection-start="4064" selection-end="4065" vertical-scroll-proportion="0.5391791" vertical-offset="1887" max-vertical-offset="11118">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="66.34615" vertical-offset="1725" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/config/shopConfig.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="280" column="30" selection-start="9894" selection-end="9894" vertical-scroll-proportion="0.23473282" vertical-offset="4637" max-vertical-offset="5508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="8" selection-start="9024" selection-end="9024" vertical-scroll-proportion="0.34736842" vertical-offset="5463" max-vertical-offset="6171">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/protected/wa-installer/backup/wa-system/controller/waController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="20" selection-start="2969" selection-end="2969" vertical-scroll-proportion="-7.6153846" vertical-offset="1893" max-vertical-offset="4488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/site/lib/actions/settings/siteSettings.action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="35" selection-start="2876" selection-end="2876" vertical-scroll-proportion="-6.8461537" vertical-offset="995" max-vertical-offset="2703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wa-system/response/waResponse.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="20" selection-start="7251" selection-end="7251" vertical-scroll-proportion="-7.3461537" vertical-offset="4875" max-vertical-offset="7038">
+        <state line="310" column="38" selection-start="7469" selection-end="7487" vertical-scroll-proportion="46.884617" vertical-offset="6489" max-vertical-offset="7038">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-cache/apps/blog/templates/compiled/blog_en_US/c2/2f/27/c22f2773bcf644f035ea1f0254646f9910c03b99.file.head.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="54" selection-start="4535" selection-end="4535" vertical-scroll-proportion="-7.1923075" vertical-offset="1309" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-apps/shop/plugins/custommenu/lib/shopCustommenu.plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="25" selection-start="448" selection-end="448" vertical-scroll-proportion="-7.1923075" vertical-offset="34" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="5" selection-start="4795" selection-end="4799" vertical-scroll-proportion="-40.666668" vertical-offset="0" max-vertical-offset="2278">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wa-apps/shop/lib/actions/frontend/shopFrontendCheckout.action.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="45" selection-start="6289" selection-end="6309" vertical-scroll-proportion="-9.0" vertical-offset="2248" max-vertical-offset="5797">
+        <state line="147" column="44" selection-start="0" selection-end="13471" vertical-scroll-proportion="-18.076923" vertical-offset="2029" max-vertical-offset="5729">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wa-data/public/shop/themes/fonarik/product.html">
+    <entry file="file://$PROJECT_DIR$/wa-system/view/waViewHelper.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="21" selection-start="3828" selection-end="3828" vertical-scroll-proportion="0.5074627" vertical-offset="1887" max-vertical-offset="11118">
-          <folding />
+        <state line="168" column="40" selection-start="0" selection-end="33153" vertical-scroll-proportion="0.12171838" vertical-offset="2754" max-vertical-offset="16847">
+          <folding>
+            <marker date="1414228139724" expanded="true" signature="5261:5756" placeholder="..." />
+            <marker date="1414228139724" expanded="true" signature="5289:5508" placeholder="{...}" />
+            <marker date="1414228139724" expanded="true" signature="5340:5380" placeholder="{...}" />
+            <marker date="1414228139724" expanded="true" signature="28400:28691" placeholder="..." />
+            <marker date="1414228139724" expanded="true" signature="28448:28680" placeholder="{...}" />
+            <marker date="1414228139724" expanded="true" signature="29796:29957" placeholder="SELECT c.id ..wa_contact_emails..." />
+          </folding>
         </state>
       </provider>
     </entry>
