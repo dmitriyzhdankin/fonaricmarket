@@ -509,13 +509,58 @@ $(document).ready(function() {
         <div class="tab4 tab_body">
         <div id="reviews_all" class="reviews" style="overflow: hidden;height: 360px;">
             <h4>{sprintf('[`%s reviews`]', $product.name)}</h4>
+            <!-- reviews begin -->
+            {function review_reviews}
+            {$depth=-1}
+            <div class="reviews">
+                {foreach $reviews as $review}
+                {if $review.depth < $depth}
+
+                {$loop=($depth-$review.depth)}
+                {section name="end-review" loop=$loop}
+                <ul class="comments"></ul>
+                </li>
+                </ul>
+                {/section}
+
+                {$depth=$review.depth}
+                {/if}
+
+                {if $review.depth == $depth}
+                </li>
+                <li data-id="{$review.id}" data-parent-id="{$review.parent_id}">
+                    {/if}
+
+                    {if $review.depth > $depth}
+                    <ul class="comments">
+                        <li data-id={$review.id} data-parent-id="{$review.parent_id}">
+                            {$depth=$review.depth}
+                            {/if}
+                            {include file="review.html" inline reply_allowed=$reply_allowed single_view=true review=$review}
+                            <!-- sub review placeholder -->
+                            {/foreach}
+
+                            {section name="end-review" loop=$depth}
+                            <ul class="menu-v with-icons reviews-branch"></ul>
+                        </li>
+                    </ul>
+                    {/section}
+            </div>
+            {/function}
+            <!--noindex rel="noindex nofollow" -->
             <ul class="comments">
                 {foreach $reviews as $review}
-                    <li data-id={$review.id} data-parent-id="0">
-                        {include file="review.html" reply_allowed=false inline}
-                    </li>
+                <li data-id={$review.id} data-parent-id="0">
+                    {include file="review.html" reply_allowed=$reply_allowed inline}
+                    {if !empty($review.comments)}
+                       {review_reviews reviews=$review.comments}
+                    {else}
+                        <ul class="menu-v with-icons reviews-branch"></ul>
+                    {/if}
+                </li>
                 {/foreach}
             </ul>
+            <!--/noindex-->
         </div>
         
         {if !$reviews}
@@ -562,13 +607,20 @@ $(document).ready(function() {
         <div class="clear"></div>
         <div class="reviews" id="reviews">
             <h4>{sprintf('[`%s reviews`]', $product.name)}</h4>
+            <!--noindex rel="noindex nofollow" -->
             <ul class="comments">
                 {foreach $reviews as $review}
-                    <li data-id={$review.id} data-parent-id="0">
-                        {include file="review.html" reply_allowed=false inline}
-                    </li>
+                <li id="review{$review.id}" data-id={$review.id} data-parent-id="0">
+                    {include file="review.html" reply_allowed=$reply_allowed inline}
+                    {if !empty($review.comments)}
+                        {review_reviews reviews=$review.comments}
+                    {else}
+                        <ul class="menu-v with-icons reviews-branch"></ul>
+                    {/if}
+                </li>
                 {/foreach}
             </ul>
+            <!--/noindex-->
         </div>
         {if !$reviews}
             <p>{sprintf('[`Be the first to <a href="%s">write a review</a> of this product!`]', 'reviews/')}</p>

@@ -364,7 +364,7 @@ margin:12px;
 div#top_pages_nav{
 float: left;
 margin-left: 145px;
-width: 475px;
+width: 555px;
 display: block;
 text-align: left;	
 }
@@ -4416,7 +4416,6 @@ tbody tr:nth-child(even) {
 .product_img {
     float: left;
     margin-right: 10px;
-    width: 110px;
 }
 .review-title {
     font-weight: bold;
@@ -4445,3 +4444,13 @@ tbody tr:nth-child(even) {
 }
 /** END Homepage posts */
 /** END BLOG */
+.container_12 .all_review .grid_3 {
+    width: 200px;
+}
+.all_review .home_review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.all_review .child_review {
+    margin-left: 50px;
+}

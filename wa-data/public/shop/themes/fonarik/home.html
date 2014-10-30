@@ -161,18 +161,19 @@
 </div><!-- .carousel -->
 </div>
 {/if}
-<!--div class="container_12 home_page_news_blocks">
+<div class="container_12 home_page_news_blocks">
     <div class="grid_6 homepage_posts">
-        <div class="homepage_posts-header">Новости</div>
+        <div class="homepage_posts-header"><a href="http://fonarik-market.ru/blog/">Новости</a></div>
         <div class="home_page_news_block">
         {$wa->block("blog.latest_posts")}
         </div>
     </div>
     <div class="grid_6 homepage_reviews">
 
-        <div class="homepage_review-header">Отзывы</div>
+        <div class="homepage_review-header"><a href="http://fonarik-market.ru/reviews/">Отзывы</a></div>
         <div class="home_page_news_block">
-            {$last_comments = shopCustomPlugin::getLastComments(3)}
+            {$comments_data = shopCustomPlugin::getLastComments(3)}
+            {$last_comments = $comments_data.parent_reviews}
             {if $last_comments}
                 {foreach $last_comments as $comment}
 
@@ -196,14 +197,14 @@
                             <br />
                         {/if}
                         <div class="autor" itemprop="author">{$comment.author.name}</div>
-                        <div class="review_text">{$comment.text|truncate:200}{if $comment.text|count_characters:true > 200}<a class="review_link" href="{$wa->shop->productUrl($comment['product_data'], 'reviews')}">Подробнее</a>{/if}</div>
+                        <div class="review_text">{$comment.text|truncate:200}{if $comment.text|count_characters:true > 200}<a class="review_link" href="{$wa->shop->productUrl($comment['product_data'])}#review{$comment.id}">Подробнее</a>{/if}</div>
                     </div>
                     <div class="clear"></div>
                     {if $comment['child_review']}
                     {foreach $comment['child_review'] as $child_review}
                     <div class="child_review">
                         <div class="autor" itemprop="author">{$comment.author.name}</div>
-                        <div class="review_text">{$child_review.text|truncate:180}{if $child_review.text|count_characters:true > 180}<a class="review_link" href="{$wa->shop->productUrl($comment['product_data'], 'reviews')}">Подробнее</a>{/if}</div>
+                        <div class="review_text">{$child_review.text|truncate:180}{if $child_review.text|count_characters:true > 180}<a class="review_link" href="{$wa->shop->productUrl($comment['product_data'])}#review{$comment.id}">Подробнее</a>{/if}</div>
                     </div>
                     {/foreach}
                     {/if}
@@ -215,7 +216,7 @@
     </div>
 
 </div>
-<div class="clear"></div-->
+<div class="clear"></div>
 
 <div class="main_text">
   <p>Fonarik-market.ru — интернет магазин фонариков, походного снаряжения, туристических ножей и иных товаров для активного отдыха — готов предложить своим посетителям очень широкий ассортимент качественной продукции от ведущих производителей со всего мира.</p>
